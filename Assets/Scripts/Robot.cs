@@ -3,25 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Robot : MonoBehaviour {
+    public int robotID;
     public float maxSpeed = 10f;
 	public float jumpForce = 700f;
     public Bullet bullet;
+    public Transform gunPoint; // bullet born point
+    public Transform groundCheck;
 
-	// Use this for initialization
-	void Start () {
-        
-	}
+    // Use this for initialization
+    void Start () {
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
 	}
 
-    public void Attack(Transform transform)
+    public void Attack(Transform transform, int invert)
     {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
-       
-        Bullet bulletInstance = Instantiate(bullet, transform.position, Quaternion.FromToRotation(transform.position, mousePosition)) as Bullet;
+
+        Vector3 gunPos = gunPoint.localPosition;
+        gunPos.x *= invert;
+        Bullet clone = Instantiate(bullet, gunPos + transform.position, Quaternion.identity) as Bullet;
     }
+
 }

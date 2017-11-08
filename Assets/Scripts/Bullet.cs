@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
 
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        direction = new Vector2(mousePosition.x - this.transform.position.x, mousePosition.y - this.transform.position.y);
+        direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
         direction.Normalize();
 
     }
