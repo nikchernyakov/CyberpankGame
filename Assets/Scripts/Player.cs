@@ -9,11 +9,12 @@ public class Player : MovingObject {
     public Robot tankRobot;
     private Dictionary<int, Robot> robots = new Dictionary<int, Robot>();
 
+    // For checking ground
     bool grounded = false;
     public float groundRadius = 0.2f;
     public LayerMask whatIsGround;
 
-    bool facingRight = false;
+    bool facingRight = false; // For checking what side is turned
 
     private Robot currentRobot;
     private Animator animator;
@@ -21,9 +22,9 @@ public class Player : MovingObject {
     private float move;
     private Rigidbody2D rb;
 
-    public Transform zRotate; // объект для вращения по оси Z
+    public Transform zRotate; // Rotate's object for axis Z
 
-    // ограничение вращения
+    // Rotation bounds
     public float minAngle = 0;
     public float maxAngle = 0;
 
@@ -57,23 +58,29 @@ public class Player : MovingObject {
     }
 
     protected override void Update () {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (currentRobot.robotID != 0 && Input.GetKeyDown(KeyCode.Alpha1))
         {
             ChangeRobot(attackRobot.robotID);   
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (currentRobot.robotID != 1 && Input.GetKeyDown(KeyCode.Alpha2))
         {
             ChangeRobot(agilityRobot.robotID);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3)){
+        else if (currentRobot.robotID != 2 && Input.GetKeyDown(KeyCode.Alpha3)){
             ChangeRobot(tankRobot.robotID);
         }
 
         CheckMove();
 
-        CheckAttack();
+        if(currentRobot.hasGun) CheckAttack();
 
         if (zRotate) SetRotation();
+
+        if (animator.GetBool(currentRobot.hasGunValueName) != currentRobot.hasGun)
+        {
+            animator.SetBool(currentRobot.hasGunValueName, currentRobot.hasGun);
+            animator.SetTrigger(currentRobot.gunTriggerName);
+        }
 
     }
 
@@ -97,11 +104,14 @@ public class Player : MovingObject {
 
     void CheckMove()
     {
+        // Check jump
         if (grounded && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)))
         {
             rb.velocity = new Vector2(0f, 0f);
             rb.AddForce(new Vector2(0f, currentRobot.jumpForce));
         }
+
+        // Triggers for animation
         if (move != 0)
         {
             animator.SetTrigger("RobotRun");
@@ -109,6 +119,7 @@ public class Player : MovingObject {
         {
             animator.SetTrigger("RobotIdle");
         }
+
         Vector2 velocityVector = new Vector2(move * currentRobot.maxSpeed, rb.velocity.y);
         rb.velocity = velocityVector;
 
