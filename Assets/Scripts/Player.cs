@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MovingObject {
+public class Player : MonoBehaviour {
 
     public Robot attackRobot;
     public Robot agilityRobot;
@@ -32,17 +32,17 @@ public class Player : MovingObject {
     private int invert;
     private Vector3 mouse;
 
-    protected override void Start () {
+    void Start () {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
-        robots.Add(attackRobot.robotID, attackRobot);
+        robots.Add(attackRobot.GetRobotID(), attackRobot);
         attackRobot.gameObject.SetActive(true);
 
-        robots.Add(agilityRobot.robotID, agilityRobot);
+        robots.Add(agilityRobot.GetRobotID(), agilityRobot);
         agilityRobot.gameObject.SetActive(false);
 
-        robots.Add(tankRobot.robotID, tankRobot);
+        robots.Add(tankRobot.GetRobotID(), tankRobot);
         tankRobot.gameObject.SetActive(false);
 
         currentRobot = attackRobot;
@@ -57,29 +57,21 @@ public class Player : MovingObject {
         move = Input.GetAxis("Horizontal");
     }
 
-    protected override void Update () {
-        if (currentRobot.robotID != 0 && Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            ChangeRobot(attackRobot.robotID);   
-        }
-        else if (currentRobot.robotID != 1 && Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            ChangeRobot(agilityRobot.robotID);
-        }
-        else if (currentRobot.robotID != 2 && Input.GetKeyDown(KeyCode.Alpha3)){
-            ChangeRobot(tankRobot.robotID);
-        }
+    void Update () {
+        CheckChangeRobot();
 
         CheckMove();
 
         if(currentRobot.hasGun) CheckAttack();
 
+        CheckExtra();
+
         if (zRotate) SetRotation();
 
-        if (animator.GetBool(currentRobot.hasGunValueName) != currentRobot.hasGun)
+        if (animator.GetBool(currentRobot.GetHasGunValueName()) != currentRobot.hasGun)
         {
-            animator.SetBool(currentRobot.hasGunValueName, currentRobot.hasGun);
-            animator.SetTrigger(currentRobot.gunTriggerName);
+            animator.SetBool(currentRobot.GetHasGunValueName(), currentRobot.hasGun);
+            animator.SetTrigger(currentRobot.GetGunTriggerName());
         }
 
     }
@@ -94,11 +86,35 @@ public class Player : MovingObject {
 
     }
 
+    void CheckChangeRobot()
+    {
+        if (currentRobot.GetRobotID() != 0 && Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            ChangeRobot(attackRobot.GetRobotID());
+        }
+        else if (currentRobot.GetRobotID() != 1 && Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            ChangeRobot(agilityRobot.GetRobotID());
+        }
+        else if (currentRobot.GetRobotID() != 2 && Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            ChangeRobot(tankRobot.GetRobotID());
+        }
+    }
+
     void CheckAttack()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         { 
-           currentRobot.Attack(transform, facingRight ? -1 : 1);
+           currentRobot.AttackSkill(transform, facingRight ? -1 : 1);
+        }
+    }
+
+    void CheckExtra()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            currentRobot.ExtraSkill();
         }
     }
 
@@ -155,4 +171,18 @@ public class Player : MovingObject {
         zRotate.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Button"))
+        {
+            Button button = collision.gameObject.GetComponent<Button>();
+            if (button.isClickable)
+            {
+                if (Input.GetKey(KeyCode.Mouse1))
+                {
+                    button.ChangeButton();
+                }
+            }
+        }
+    }
 }

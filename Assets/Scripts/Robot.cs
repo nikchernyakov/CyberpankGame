@@ -15,22 +15,31 @@ public class Robot : MonoBehaviour {
     public Transform gunPoint; // Bullet born point
     public Transform groundCheck; 
 
-
-    // Use this for initialization
-    void Start () {
-
+    public int GetRobotID()
+    {
+        return robotID;
     }
-	
-	// Update is called once per frame
-	void Update () {
-        
-	}
 
-    public void Attack(Transform transform, int invert)
+    public string GetHasGunValueName()
+    {
+        return hasGunValueName;
+    }
+
+    public string GetGunTriggerName()
+    {
+        return gunTriggerName;
+    }
+
+    public void AttackSkill(Transform transform, int invert)
     {
         Vector3 gunPos = gunPoint.localPosition;
         gunPos.x *= invert;
         Bullet clone = Instantiate(bullet, gunPos + transform.position, Quaternion.identity) as Bullet;
     }
 
+
+    public virtual void ExtraSkill()
+    {
+
+    }
 }
