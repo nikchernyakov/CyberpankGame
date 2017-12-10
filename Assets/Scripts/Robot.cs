@@ -5,11 +5,12 @@ using UnityEngine;
 public class Robot : MonoBehaviour {
     public int robotID;
     public float maxSpeed = 10f;
-	public float jumpForce = 700f;
+    public float jumpForce = 700f;
+    public float jumpVelocity = 700f;
 
     public bool hasGun;
-    public string hasGunValueName;
-    public string gunTriggerName;
+    public HasGunValueNameEnum hasGunValueName;
+    public GunTriggerNameEnum gunTriggerName;
     public Bullet bullet;
 
     public Transform gunPoint; // Bullet born point
@@ -22,12 +23,12 @@ public class Robot : MonoBehaviour {
 
     public string GetHasGunValueName()
     {
-        return hasGunValueName;
+        return TagManager.GetTagNameByEnum(hasGunValueName);
     }
 
     public string GetGunTriggerName()
     {
-        return gunTriggerName;
+        return TagManager.GetTagNameByEnum(gunTriggerName);
     }
 
     public void AttackSkill(Transform transform, int invert)
@@ -39,6 +40,11 @@ public class Robot : MonoBehaviour {
 
 
     public virtual void ExtraSkill()
+    {
+
+    }
+
+    public virtual void Off()
     {
 
     }

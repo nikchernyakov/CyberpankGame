@@ -33,7 +33,10 @@ public class PressurePlate : Doneble {
     {
         pressingObjectsCount++;
 
-        ChangePress();
+        if (pressingObjectsCount == 1)
+        {
+            ChangePress();
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)

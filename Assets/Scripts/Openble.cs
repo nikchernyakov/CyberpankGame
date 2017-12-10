@@ -29,7 +29,7 @@ public class Openble : MonoBehaviour {
         bool needChangeOpen = false;   
         if (isOpen && !donebleObject.IsDone())
         {
-            needChangeOpen = CheckDonebleList(false);
+            needChangeOpen = true;
         }
         else if (!isOpen && donebleObject.IsDone())
         {

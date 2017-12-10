@@ -5,6 +5,8 @@ using UnityEngine;
 public class Takeble : MonoBehaviour{
 
     private bool isTaken = false;
+    private Transform previousParent;
+
     public bool IsTaken()
     {
         return isTaken;
@@ -13,13 +15,14 @@ public class Takeble : MonoBehaviour{
     public virtual void Take(Transform whoTakes)
     {
         isTaken = true;
+        previousParent = transform.parent;
         transform.SetParent(whoTakes);
     }
 
     public virtual void Drop()
     {
         isTaken = false;
-        transform.SetParent(null);
+        transform.SetParent(previousParent);
     }
 
 }

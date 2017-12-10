@@ -36,10 +36,21 @@ public class TankRobot : Robot {
         isTook = !isTook;
     }
 
+    public override void Off()
+    {
+        base.Off();
+
+        if (isTook && currentTarget != null)
+        {
+            isTook = !isTook;
+            currentTarget.Drop();
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-        if (!isTook && collision.gameObject.CompareTag("Takeble"))
+        if (!isTook && collision.gameObject.CompareTag(TagManager.GetTagNameByEnum(TagEnum.Takeble)))
         {
             currentTarget = collision.gameObject.GetComponent<Takeble>();
         }
@@ -47,7 +58,7 @@ public class TankRobot : Robot {
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (!isTook && collision.gameObject.CompareTag("Takeble"))
+        if (!isTook && collision.gameObject.CompareTag(TagManager.GetTagNameByEnum(TagEnum.Takeble)))
         {
             currentTarget = null;
         }

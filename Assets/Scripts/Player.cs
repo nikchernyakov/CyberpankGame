@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class Player : LivingObject {
 
     public Robot attackRobot;
     public Robot agilityRobot;
@@ -32,9 +32,12 @@ public class Player : MonoBehaviour {
     private int invert;
     private Vector3 mouse;
 
+    private JumpHandler jumpHandler;
+
     void Start () {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        jumpHandler = GetComponent<JumpHandler>();
 
         robots.Add(attackRobot.GetRobotID(), attackRobot);
         attackRobot.gameObject.SetActive(true);
@@ -79,6 +82,7 @@ public class Player : MonoBehaviour {
     void ChangeRobot(int robotID)
     {
         animator.SetTrigger("ChangeRobot");
+        currentRobot.Off();
         currentRobot.gameObject.SetActive(false);
         robots.TryGetValue(robotID, out currentRobot);
         currentRobot.gameObject.SetActive(true);
@@ -112,7 +116,7 @@ public class Player : MonoBehaviour {
 
     void CheckExtra()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.J))
         {
             currentRobot.ExtraSkill();
         }
@@ -121,10 +125,9 @@ public class Player : MonoBehaviour {
     void CheckMove()
     {
         // Check jump
-        if (grounded && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)))
+        if (grounded && jumpHandler.CheckJump())
         {
-            rb.velocity = new Vector2(0f, 0f);
-            rb.AddForce(new Vector2(0f, currentRobot.jumpForce));
+            jumpHandler.Jump(currentRobot.jumpVelocity);
         }
 
         // Triggers for animation
@@ -144,12 +147,12 @@ public class Player : MonoBehaviour {
 
     void CheckFlip()
     {
-        /*if (move > 0 && !facingRight)
+        if (move > 0 && !facingRight)
             Flip();
         else if (move < 0 && facingRight)
-            Flip();*/
-        if (angle == maxAngle && mouse.x < zRotate.position.x && facingRight) Flip();
-        else if (angle == maxAngle && mouse.x > zRotate.position.x && !facingRight) Flip();
+            Flip();
+        /*if (angle == maxAngle && mouse.x < zRotate.position.x && facingRight) Flip();
+        else if (angle == maxAngle && mouse.x > zRotate.position.x && !facingRight) Flip();*/
     }
 
     void Flip()
@@ -171,18 +174,4 @@ public class Player : MonoBehaviour {
         zRotate.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Button"))
-        {
-            Button button = collision.gameObject.GetComponent<Button>();
-            if (button.isClickable)
-            {
-                if (Input.GetKey(KeyCode.Mouse1))
-                {
-                    button.ChangeButton();
-                }
-            }
-        }
-    }
 }
