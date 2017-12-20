@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
     private GameStateEnum gameState = GameStateEnum.Game;
 
     private int currentUIHp = 0;
+    private float fps;
 
 	// Use this for initialization
 	void Start () {
@@ -30,7 +31,9 @@ public class GameManager : MonoBehaviour {
         }
 
         CheckOtherActions();
-	}
+
+        fps = 1.0f / Time.deltaTime;
+    }
 
     // Update HP value in UI
     void UpdateUIHp()
@@ -71,8 +74,7 @@ public class GameManager : MonoBehaviour {
 
     void OnGUI()
     {
-        float fps = 1.0f / Time.deltaTime;
-        GUILayout.Label("FPS = " + fps);
+        GUILayout.Label("FPS = " + Mathf.CeilToInt(fps));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
