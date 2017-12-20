@@ -50,14 +50,17 @@ public class Player : LivingObject {
         // Add attack robot and set it active
         robots.Add(attackRobot.GetRobotID(), attackRobot);
         attackRobot.gameObject.SetActive(true);
+        attackRobot.SetRobotSize();
 
         // Add agility robot
         robots.Add(agilityRobot.GetRobotID(), agilityRobot);
         agilityRobot.gameObject.SetActive(false);
+        agilityRobot.SetRobotSize();
 
         // Add tank robot
         robots.Add(tankRobot.GetRobotID(), tankRobot);
         tankRobot.gameObject.SetActive(false);
+        tankRobot.SetRobotSize();
 
         currentRobot = attackRobot;
 
@@ -90,6 +93,7 @@ public class Player : LivingObject {
             animator.SetTrigger(currentRobot.GetGunTriggerName());
         }
 
+        //Debug.DrawRay(transform.position, Vector2.up * currentRobot.GetSize().y * 2, Color.red);
     }
 
     void ChangeRobot(int newRobotID)
@@ -135,18 +139,31 @@ public class Player : LivingObject {
 
     void CheckChangeRobot()
     {
-        if (currentRobot.GetRobotID() != 0 && Input.GetKeyDown(KeyCode.Alpha1))
+        if (currentRobot.GetRobotID() != 0 && Input.GetKeyDown(KeyCode.Alpha1) && IsChangeRobotEnable(attackRobot.GetSize()))
         {
             ChangeRobot(attackRobot.GetRobotID());
+
         }
         else if (currentRobot.GetRobotID() != 1 && Input.GetKeyDown(KeyCode.Alpha2))
         {
             ChangeRobot(agilityRobot.GetRobotID());
         }
-        else if (currentRobot.GetRobotID() != 2 && Input.GetKeyDown(KeyCode.Alpha3))
+        else if (currentRobot.GetRobotID() != 2 && Input.GetKeyDown(KeyCode.Alpha3) && IsChangeRobotEnable(tankRobot.GetSize()))
         {
             ChangeRobot(tankRobot.GetRobotID());
         }
+    }
+
+    bool IsChangeRobotEnable(Vector2 size)
+    {
+        RaycastHit2D upHit = Physics2D.Raycast(transform.position, Vector2.up, size.y, whatIsGround);
+        RaycastHit2D upLeftHit = Physics2D.Raycast(transform.position + size.x * Vector3.left, Vector2.up, size.y, whatIsGround);
+        RaycastHit2D upRightHit = Physics2D.Raycast(transform.position + size.x * Vector3.right, Vector2.up, size.y, whatIsGround);
+        RaycastHit2D downHit = Physics2D.Raycast(transform.position, Vector2.down, size.y, whatIsGround);
+        RaycastHit2D downLeftHit = Physics2D.Raycast(transform.position + size.x * Vector3.left, Vector2.up, size.y, whatIsGround);
+        RaycastHit2D downRightHit = Physics2D.Raycast(transform.position + size.x * Vector3.right, Vector2.up, size.y, whatIsGround);
+        return (upHit.collider == null && upLeftHit.collider == null && upRightHit.collider == null)
+            || (downHit.collider == null && downLeftHit.collider == null && downRightHit.collider == null);
     }
 
     void CheckAttack()
