@@ -19,6 +19,6 @@ public class UIManager : MonoBehaviour {
 
     public void ChangeHP(int hp)
     {
-        hpText.text = "hp: " + hp;
+        hpText.text = "HP: " + hp;
     }
 }
