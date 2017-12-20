@@ -14,10 +14,14 @@ public class Player : LivingObject {
     public float groundRadius = 0.2f;
     public LayerMask whatIsGround;
 
+    public float invisibleAlpha;
+    private bool isVisible = true;
+
     bool facingRight = false; // For checking what side is turned
 
     private Robot currentRobot;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     private float move;
     private Rigidbody2D rb;
@@ -34,17 +38,24 @@ public class Player : LivingObject {
 
     private JumpHandler jumpHandler;
 
-    void Start () {
+    protected override void Start () {
+        base.Start();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         jumpHandler = GetComponent<JumpHandler>();
 
+        // Add all robots to player
+        // Add attack robot and set it active
         robots.Add(attackRobot.GetRobotID(), attackRobot);
         attackRobot.gameObject.SetActive(true);
 
+        // Add agility robot
         robots.Add(agilityRobot.GetRobotID(), agilityRobot);
         agilityRobot.gameObject.SetActive(false);
 
+        // Add tank robot
         robots.Add(tankRobot.GetRobotID(), tankRobot);
         tankRobot.gameObject.SetActive(false);
 
@@ -60,7 +71,9 @@ public class Player : LivingObject {
         move = Input.GetAxis("Horizontal");
     }
 
-    void Update () {
+    protected override void Update () {
+        base.Update();
+
         CheckChangeRobot();
 
         CheckMove();
@@ -79,15 +92,45 @@ public class Player : LivingObject {
 
     }
 
-    void ChangeRobot(int robotID)
+    void ChangeRobot(int newRobotID)
     {
-        animator.SetTrigger("ChangeRobot");
-        currentRobot.Off();
-        currentRobot.gameObject.SetActive(false);
-        robots.TryGetValue(robotID, out currentRobot);
-        currentRobot.gameObject.SetActive(true);
-        animator.SetInteger("RobotID", robotID);
+        Robot previousRobot = currentRobot;
+        robots.TryGetValue(newRobotID, out currentRobot);
+        if (currentRobot == null)
+        {
+            currentRobot = previousRobot;
+            Debug.LogError("currentRobot == null in Player");
+            return;
+        }
 
+        // Cancel all activivties for previous robot and set unactive status
+        previousRobot.CancelExtraSkill();
+        previousRobot.gameObject.SetActive(false);
+
+        // Change robot to new one
+        animator.SetInteger("RobotID", currentRobot.robotID);
+        TriggerChangeRobot(previousRobot.robotID, newRobotID);
+        currentRobot.gameObject.SetActive(true);
+
+    }
+
+    void TriggerChangeRobot(int robotIDfrom, int robotIDto)
+    {
+        /*
+         * Determine what animation we must to use
+         * All animations collected by order, which depends on robotIDfrom
+         * Animations for certain robot stay in robotID * 2 index and +1 (because all robots has 2 animations of transform)
+         * 
+         * This formula help to find index in this order
+         */
+        int from = robotIDfrom, to = robotIDto, animationNumber;
+        if (robotIDfrom < robotIDto)
+            to--;
+
+        animationNumber = from * 2 + to;
+
+        animator.SetFloat("RobotChangeAnimationID", animationNumber);
+        animator.SetTrigger("ChangeRobot");
     }
 
     void CheckChangeRobot()
@@ -127,7 +170,7 @@ public class Player : LivingObject {
         // Check jump
         if (grounded && jumpHandler.CheckJump())
         {
-            jumpHandler.Jump(currentRobot.jumpVelocity);
+            jumpHandler.Jump(currentRobot.jumpVelocity, currentRobot.positiveVelocityYBound);
         }
 
         // Triggers for animation
@@ -172,6 +215,29 @@ public class Player : LivingObject {
         angle = Mathf.Atan2(lookPos.y, lookPos.x * invert) * Mathf.Rad2Deg;
         angle = Mathf.Clamp(angle, minAngle, maxAngle);
         zRotate.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
+
+    public void ChangeState(bool inVisible)
+    {
+        gameObject.layer += inVisible ? -1 : 1;
+
+        Color color = spriteRenderer.color;
+        if (inVisible)
+        {
+            color.a = 1;
+        }
+        else
+        {
+            color.a = invisibleAlpha;
+        }
+        spriteRenderer.color = color;
+
+        isVisible = inVisible;
+    }
+
+    public bool IsVisible()
+    {
+        return isVisible;
     }
 
 }

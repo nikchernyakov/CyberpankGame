@@ -6,6 +6,7 @@ public class PressurePlate : Doneble {
 
     public bool isPressed = true;
     public int pressingObjectsCount = 0;
+    public LayerMask whatIsPress;
 
     public override bool IsDone()
     {
@@ -31,24 +32,28 @@ public class PressurePlate : Doneble {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        pressingObjectsCount++;
-
-        if (pressingObjectsCount == 1)
+        if (((1 << collision.gameObject.layer) & whatIsPress) != 0)
         {
-            ChangePress();
+            pressingObjectsCount++;
+
+            if (pressingObjectsCount == 1)
+            {
+                ChangePress();
+            }
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        pressingObjectsCount--;
-
-        if(pressingObjectsCount <= 0)
+        if (((1 << collision.gameObject.layer) & whatIsPress) != 0)
         {
-            pressingObjectsCount = pressingObjectsCount < 0 ? 0 : pressingObjectsCount;
-            ChangePress();
-        }
+            pressingObjectsCount--;
 
-        
+            if (pressingObjectsCount <= 0)
+            {
+                pressingObjectsCount = pressingObjectsCount < 0 ? 0 : pressingObjectsCount;
+                ChangePress();
+            }
+        }
     }
 }

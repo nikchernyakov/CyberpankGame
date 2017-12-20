@@ -2,30 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Openble : MonoBehaviour {
-
-    public List<Doneble> donebleList;
+public class Openble : DonebleChecker{
     public bool isOpen = false;
-
-	void Start () {
-		foreach(Doneble doneble in donebleList)
-        {
-            doneble.RegisterListener(UpdateDone);
-        }
-	}
-
-	void Update () {
-		
-	}
 
     public void ChangeOpen()
     {
         gameObject.SetActive(!isOpen);
     }
 
-    public void UpdateDone(Doneble donebleObject)
+    public override void UpdateDone(Doneble donebleObject)
     {
-        
+        base.UpdateDone(donebleObject);
+
         bool needChangeOpen = false;   
         if (isOpen && !donebleObject.IsDone())
         {
@@ -43,16 +31,6 @@ public class Openble : MonoBehaviour {
             isOpen = !isOpen;
             ChangeOpen();
         }
-    }
-
-    private bool CheckDonebleList(bool needDone)
-    {
-        foreach (Doneble donebleElement in donebleList)
-        {
-            if (donebleElement.IsDone() != needDone)
-                return false;
-        }
-        return true;
     }
 
 }

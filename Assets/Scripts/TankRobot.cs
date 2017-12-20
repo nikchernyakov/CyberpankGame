@@ -36,9 +36,9 @@ public class TankRobot : Robot {
         isTook = !isTook;
     }
 
-    public override void Off()
+    public override void CancelExtraSkill()
     {
-        base.Off();
+        base.CancelExtraSkill();
 
         if (isTook && currentTarget != null)
         {

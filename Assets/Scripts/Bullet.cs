@@ -5,15 +5,17 @@ using UnityEngine;
 public class Bullet : Damageble {
 
     public float bulletLifeTime;
+    public LayerMask whatIsTarget;
 
     private Rigidbody2D rb;
     private Vector2 direction;
     private float bulletSpeed;
+    private Vector2 bulletVelocity;
 
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
-
+        rb.velocity = bulletVelocity;
         /*Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
         direction.Normalize();*/
@@ -24,19 +26,18 @@ public class Bullet : Damageble {
 	void Update () {
         if(bulletLifeTime < 0)
         {
-            Destroy(gameObject);
+            Die();
         }
 
         if (direction == null) return;
-
-        rb.velocity = new Vector2(direction.x * bulletSpeed, direction.y * bulletSpeed);
         bulletLifeTime -= Time.deltaTime;
 	}
 
-    public void SetDirection(Vector2 direction)
+    public void SetVelocity(Vector2 velocity)
     {
-        this.direction = direction;
-        direction.Normalize();
+        bulletVelocity = velocity;
+        if(rb != null)
+            rb.velocity = bulletVelocity;
     }
 
     public void SetSpeed(float speed)
@@ -44,15 +45,12 @@ public class Bullet : Damageble {
         bulletSpeed = speed;
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*if (collision.gameObject.CompareTag(TagManager.GetTagNameByEnum(TagEnum.Player)))
+        if (((1 << collision.gameObject.layer) & whatIsTarget) != 0)
         {
-            //Debug.Log("Receive Damage");
-            collision.gameObject.GetComponent<Player>().ReceiveDamage(damageAmount);
-        }*/
-        Destroy(gameObject);
+            Die();
+        }
     }
 
 }

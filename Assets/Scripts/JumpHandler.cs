@@ -6,6 +6,7 @@ public class JumpHandler : MonoBehaviour {
 
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
+    private float currentPositiveVelocityYBound;
 
     private Rigidbody2D rb;
 
@@ -20,10 +21,19 @@ public class JumpHandler : MonoBehaviour {
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-        else if(rb.velocity.y > 0 && !CheckJump())
+        else if(rb.velocity.y > 0)
         {
-            Debug.Log("lol");
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+            if (CheckJump())
+            {
+               if(rb.velocity.y < currentPositiveVelocityYBound)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, 0);
+                }
+            }
+            else
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+            }
         }
         //Debug.Log(rb.velocity);
 	}
@@ -33,8 +43,15 @@ public class JumpHandler : MonoBehaviour {
         return Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W);
     }
     
-    public void Jump(float jumpVelocity)
+    public void Jump(float jumpVelocity, float positiveVelocityYBound)
     {
         rb.velocity = Vector2.up * jumpVelocity;
+        currentPositiveVelocityYBound = positiveVelocityYBound;
+    }
+
+    public void JumpForHeight(float jumpHeight, float timeToJumpApex)
+    {
+        float needGravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
+        
     }
 }

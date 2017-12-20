@@ -5,8 +5,8 @@ using UnityEngine;
 public class Robot : MonoBehaviour {
     public int robotID;
     public float maxSpeed = 10f;
-    public float jumpForce = 700f;
     public float jumpVelocity = 700f;
+    public float positiveVelocityYBound = 2f;
 
     public bool hasGun;
     public HasGunValueNameEnum hasGunValueName;
@@ -14,7 +14,7 @@ public class Robot : MonoBehaviour {
     public Bullet bullet;
 
     public Transform gunPoint; // Bullet born point
-    public Transform groundCheck; 
+    public Transform groundCheck;
 
     public int GetRobotID()
     {
@@ -44,7 +44,7 @@ public class Robot : MonoBehaviour {
 
     }
 
-    public virtual void Off()
+    public virtual void CancelExtraSkill()
     {
 
     }

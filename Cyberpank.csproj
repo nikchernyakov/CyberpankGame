@@ -225,23 +225,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AgilityRobot.cs" />
     <Compile Include="Assets\Scripts\AttackRobot.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Button.cs" />
     <Compile Include="Assets\Scripts\Damageble.cs" />
     <Compile Include="Assets\Scripts\Doneble.cs" />
+    <Compile Include="Assets\Scripts\DonebleChecker.cs" />
     <Compile Include="Assets\Scripts\FallingObject.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\Dieble.cs" />
     <Compile Include="Assets\Scripts\Interfaces\Hackble.cs" />
     <Compile Include="Assets\Scripts\Interfaces\Takeble.cs" />
     <Compile Include="Assets\Scripts\JumpHandler.cs" />
     <Compile Include="Assets\Scripts\LivingObject.cs" />
+    <Compile Include="Assets\Scripts\ObjectShower.cs" />
     <Compile Include="Assets\Scripts\Openble.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PressurePlate.cs" />
     <Compile Include="Assets\Scripts\Robot.cs" />
+    <Compile Include="Assets\Scripts\Room.cs" />
+    <Compile Include="Assets\Scripts\RoomController.cs" />
     <Compile Include="Assets\Scripts\SharpObject.cs" />
+    <Compile Include="Assets\Scripts\Showeble.cs" />
     <Compile Include="Assets\Scripts\TagEnum.cs" />
     <Compile Include="Assets\Scripts\TankRobot.cs" />
     <Compile Include="Assets\Scripts\Turret.cs" />

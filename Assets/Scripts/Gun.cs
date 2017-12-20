@@ -7,6 +7,7 @@ public class Gun : MonoBehaviour {
     public Transform gunPoint; // Bullet born point
     public Bullet bullet;
     public float bulletSpeed;
+    public Transform bulletContainer;
 
     // Use this for initialization
     void Start () {
@@ -22,8 +23,12 @@ public class Gun : MonoBehaviour {
     {
         
         Bullet clone = Instantiate(bullet, gunPoint.transform.position, Quaternion.identity) as Bullet;
+
+        clone.transform.parent = bulletContainer;
         clone.transform.rotation = transform.rotation;
-        clone.SetDirection(gunPoint.transform.position - transform.position);
-        clone.SetSpeed(bulletSpeed);
+        Vector2 velocity = gunPoint.transform.position - transform.position;
+        clone.SetVelocity(velocity * bulletSpeed);
+        //clone.SetDirection();
+        //clone.SetSpeed(bulletSpeed);
     }
 }

@@ -2,22 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LivingObject : MonoBehaviour {
+public class LivingObject : Dieble {
 
-    public int hp;
+    public int maxHP;
+    private int currentHP;
+    private bool alive = true;
 	
-	void Start () {
-		
+	protected virtual void Start () {
+        currentHP = maxHP;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	protected virtual void Update () {
+		if(currentHP <= 0)
+        {
+            alive = false;
+        }
 	}
+
+    public int GetCurrentHP()
+    {
+        return currentHP;
+    }
+
+    public bool IsAlive()
+    {
+        return alive;
+    }
 
     public void DecreaseHp(int decreaseCount)
     {
-        hp -= decreaseCount;
+        currentHP = Mathf.Clamp(currentHP - decreaseCount, 0, maxHP);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
