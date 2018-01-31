@@ -12,7 +12,7 @@ public class AgilityRobot : Robot {
 
     private Player player;
 
-    private void Start()
+    protected override void Start()
     {
         player = FindObjectOfType<Player>();
         currentInvisibleCooldown = 0;

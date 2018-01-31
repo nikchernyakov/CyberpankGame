@@ -16,21 +16,29 @@ public class Robot : MonoBehaviour {
     public Transform gunPoint; // Bullet born point
     public Transform groundCheck;
 
-    private Vector2 robotSize;
+    private Vector2 colliderSize;
+    private Vector2 colliderOffset;
 
     protected virtual void Start()
     {
         
     }
 
-    public void SetRobotSize()
+    public void SetColliderProperties()
     {
-        robotSize = GetComponent<CapsuleCollider2D>().size;
+        CapsuleCollider2D collider = GetComponent<CapsuleCollider2D>();
+        colliderSize = collider.size;
+        colliderOffset = collider.offset;
     }
 
-    public Vector2 GetSize()
+    public Vector2 GetColliderSize()
     {
-        return robotSize;
+        return colliderSize;
+    }
+
+    public Vector3 GetColliderOffset()
+    {
+        return colliderOffset;
     }
 
     public int GetRobotID()

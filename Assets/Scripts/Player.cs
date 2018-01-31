@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : LivingObject {
 
+    public Animator robotAnimator;
+    public SpriteRenderer spriteRenderer;
     public Robot attackRobot;
     public Robot agilityRobot;
     public Robot tankRobot;
@@ -21,7 +23,7 @@ public class Player : LivingObject {
 
     private Robot currentRobot;
     private Animator animator;
-    private SpriteRenderer spriteRenderer;
+    //private SpriteRenderer spriteRenderer;
 
     private float move;
     private Rigidbody2D rb;
@@ -41,30 +43,25 @@ public class Player : LivingObject {
     protected override void Start () {
         base.Start();
 
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        //spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         jumpHandler = GetComponent<JumpHandler>();
 
-        // Add all robots to player
-        // Add attack robot and set it active
-        robots.Add(attackRobot.GetRobotID(), attackRobot);
-        attackRobot.gameObject.SetActive(true);
-        attackRobot.SetRobotSize();
-
-        // Add agility robot
-        robots.Add(agilityRobot.GetRobotID(), agilityRobot);
-        agilityRobot.gameObject.SetActive(false);
-        agilityRobot.SetRobotSize();
-
-        // Add tank robot
-        robots.Add(tankRobot.GetRobotID(), tankRobot);
-        tankRobot.gameObject.SetActive(false);
-        tankRobot.SetRobotSize();
+        foreach(Robot robot in (new Robot[] {attackRobot, agilityRobot, tankRobot}))
+        {
+            robots.Add(robot.GetRobotID(), robot);
+            robot.gameObject.SetActive(false);
+            robot.SetColliderProperties();
+        }
 
         currentRobot = attackRobot;
+        currentRobot.gameObject.SetActive(true);
+        setAnimatorToRobot(currentRobot);
 
         if (!facingRight) invert = -1; else invert = 1;
+
+        Debug.Log(robotAnimator.gameObject.activeSelf);
     }
 
     void FixedUpdate()
@@ -87,13 +84,17 @@ public class Player : LivingObject {
 
         if (zRotate) SetRotation();
 
-        if (animator.GetBool(currentRobot.GetHasGunValueName()) != currentRobot.hasGun)
+        if (robotAnimator.GetBool(currentRobot.GetHasGunValueName()) != currentRobot.hasGun)
         {
-            animator.SetBool(currentRobot.GetHasGunValueName(), currentRobot.hasGun);
-            animator.SetTrigger(currentRobot.GetGunTriggerName());
+            robotAnimator.SetBool(currentRobot.GetHasGunValueName(), currentRobot.hasGun);
+            robotAnimator.SetTrigger(currentRobot.GetGunTriggerName());
         }
+    }
 
-        //Debug.DrawRay(transform.position, Vector2.up * currentRobot.GetSize().y * 2, Color.red);
+    void setAnimatorToRobot(Robot robot)
+    {
+        robotAnimator.transform.parent = robot.transform;
+        robotAnimator.transform.position = robot.transform.position;
     }
 
     void ChangeRobot(int newRobotID)
@@ -111,8 +112,13 @@ public class Player : LivingObject {
         previousRobot.CancelExtraSkill();
         previousRobot.gameObject.SetActive(false);
 
+        //Debug.Log(transform.InverseTransformPoint(currentRobot.gameObject.transform.position));
+        //animator.bodyPosition = gameObject.transform.position + transform.InverseTransformPoint(currentRobot.gameObject.transform.position);
+        //Debug.Log(transform.position);
+        setAnimatorToRobot(currentRobot);
+
         // Change robot to new one
-        animator.SetInteger("RobotID", currentRobot.robotID);
+        robotAnimator.SetInteger("RobotID", currentRobot.robotID);
         TriggerChangeRobot(previousRobot.robotID, newRobotID);
         currentRobot.gameObject.SetActive(true);
 
@@ -132,14 +138,13 @@ public class Player : LivingObject {
             to--;
 
         animationNumber = from * 2 + to;
-
-        animator.SetFloat("RobotChangeAnimationID", animationNumber);
-        animator.SetTrigger("ChangeRobot");
+        robotAnimator.SetInteger("RobotChangeAnimationID", animationNumber);
+        robotAnimator.SetTrigger("ChangeRobotTrigger");
     }
 
     void CheckChangeRobot()
     {
-        if (currentRobot.GetRobotID() != 0 && Input.GetKeyDown(KeyCode.Alpha1) && IsChangeRobotEnable(attackRobot.GetSize()))
+        if (currentRobot.GetRobotID() != 0 && Input.GetKeyDown(KeyCode.Alpha1) && IsChangeRobotEnable(attackRobot.GetColliderSize()))
         {
             ChangeRobot(attackRobot.GetRobotID());
 
@@ -148,7 +153,7 @@ public class Player : LivingObject {
         {
             ChangeRobot(agilityRobot.GetRobotID());
         }
-        else if (currentRobot.GetRobotID() != 2 && Input.GetKeyDown(KeyCode.Alpha3) && IsChangeRobotEnable(tankRobot.GetSize()))
+        else if (currentRobot.GetRobotID() != 2 && Input.GetKeyDown(KeyCode.Alpha3) && IsChangeRobotEnable(tankRobot.GetColliderSize()))
         {
             ChangeRobot(tankRobot.GetRobotID());
         }
@@ -193,10 +198,10 @@ public class Player : LivingObject {
         // Triggers for animation
         if (move != 0)
         {
-            animator.SetTrigger("RobotRun");
+            robotAnimator.SetTrigger("RobotRun");
         } else
         {
-            animator.SetTrigger("RobotIdle");
+            robotAnimator.SetTrigger("RobotIdle");
         }
 
         Vector2 velocityVector = new Vector2(move * currentRobot.maxSpeed, rb.velocity.y);
@@ -237,6 +242,7 @@ public class Player : LivingObject {
     public void ChangeState(bool inVisible)
     {
         gameObject.layer += inVisible ? -1 : 1;
+        Debug.Log("ChangeState " + inVisible);
 
         Color color = spriteRenderer.color;
         if (inVisible)
