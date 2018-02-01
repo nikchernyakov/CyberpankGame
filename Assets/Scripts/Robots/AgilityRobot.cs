@@ -10,13 +10,16 @@ public class AgilityRobot : Robot {
     public float invisibleCooldown;
     private float currentInvisibleCooldown;
 
-    private Player player;
+    public float invisibleAlpha;
+    private VisibleState visibleState;
+
+    public AnimationRenderer animationRenderer;
 
     protected override void Start()
     {
-        player = FindObjectOfType<Player>();
         currentInvisibleCooldown = 0;
         currentInvisibleTime = 0;
+        visibleState = VisibleState.VISIBLE;
     }
 
     // Update is called once per frame
@@ -26,35 +29,35 @@ public class AgilityRobot : Robot {
 
     void CheckInvisible()
     {
-        if (currentInvisibleTime > 0)
+        if (IsVisible())
         {
-            currentInvisibleTime -= Time.deltaTime;
+            if (currentInvisibleCooldown > 0)
+                currentInvisibleCooldown -= Time.deltaTime;
         }
         else
         {
-            if (!player.IsVisible())
+            if (currentInvisibleTime > 0)
             {
-                BecomeVisible();
+                currentInvisibleTime -= Time.deltaTime;
             }
             else
             {
-                if(currentInvisibleCooldown > 0)
-                    currentInvisibleCooldown -= Time.deltaTime;
+                BecomeVisible();
             }
         }
-
 
     }
 
     private void BecomeInvisible()
     {
-        player.ChangeState(false);
+        ChangeState(false);
         currentInvisibleTime = invisibleTime;
     }
 
     private void BecomeVisible()
     {
-        player.ChangeState(true);
+        ChangeState(true);
+        currentInvisibleTime = 0;
         currentInvisibleCooldown = invisibleCooldown;
     }
 
@@ -72,6 +75,34 @@ public class AgilityRobot : Robot {
     {
         base.CancelExtraSkill();
 
-        BecomeVisible();
+        if (!IsVisible())
+        {
+            BecomeVisible();
+        }
+    }
+
+    public void ChangeState(bool inVisible)
+    {
+        gameObject.layer += inVisible ? -1 : 1;
+
+        Color color = animationRenderer.getSpriteRenderer().color;
+        if (inVisible)
+        {
+            color.a = 1;
+        }
+        else
+        {
+            color.a = invisibleAlpha;
+        }
+        animationRenderer.getSpriteRenderer().color = color;
+
+        visibleState = inVisible ? VisibleState.VISIBLE : VisibleState.INVISIBLE;
+    }
+
+    public bool IsVisible()
+    {
+        return visibleState == VisibleState.VISIBLE;
     }
 }
+
+public enum VisibleState { VISIBLE, INVISIBLE }

@@ -16,9 +16,6 @@ public class Player : LivingObject {
     public float groundRadius = 0.2f;
     public LayerMask whatIsGround;
 
-    public float invisibleAlpha;
-    private bool isVisible = true;
-
     bool facingRight = false; // For checking what side is turned
 
     private Robot currentRobot;
@@ -237,30 +234,6 @@ public class Player : LivingObject {
         angle = Mathf.Atan2(lookPos.y, lookPos.x * invert) * Mathf.Rad2Deg;
         angle = Mathf.Clamp(angle, minAngle, maxAngle);
         zRotate.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-    }
-
-    public void ChangeState(bool inVisible)
-    {
-        gameObject.layer += inVisible ? -1 : 1;
-        Debug.Log("ChangeState " + inVisible);
-
-        Color color = spriteRenderer.color;
-        if (inVisible)
-        {
-            color.a = 1;
-        }
-        else
-        {
-            color.a = invisibleAlpha;
-        }
-        spriteRenderer.color = color;
-
-        isVisible = inVisible;
-    }
-
-    public bool IsVisible()
-    {
-        return isVisible;
     }
 
 }
