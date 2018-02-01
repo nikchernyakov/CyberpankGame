@@ -85,7 +85,7 @@ public class AgilityRobot : Robot {
     {
         gameObject.layer += inVisible ? -1 : 1;
 
-        Color color = animationRenderer.getSpriteRenderer().color;
+        Color color = animationRenderer.GetSpriteRenderer().color;
         if (inVisible)
         {
             color.a = 1;
@@ -94,7 +94,7 @@ public class AgilityRobot : Robot {
         {
             color.a = invisibleAlpha;
         }
-        animationRenderer.getSpriteRenderer().color = color;
+        animationRenderer.GetSpriteRenderer().color = color;
 
         visibleState = inVisible ? VisibleState.VISIBLE : VisibleState.INVISIBLE;
     }

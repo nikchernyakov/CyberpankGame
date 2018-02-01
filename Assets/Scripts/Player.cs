@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player : LivingObject {
 
-    public Animator robotAnimator;
-    public SpriteRenderer spriteRenderer;
+    public AnimationRenderer animationRenderer;
+    private Animator robotAnimator;
     public Robot attackRobot;
     public Robot agilityRobot;
     public Robot tankRobot;
@@ -44,8 +44,9 @@ public class Player : LivingObject {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         jumpHandler = GetComponent<JumpHandler>();
+        robotAnimator = animationRenderer.GetComponent<Animator>();
 
-        foreach(Robot robot in (new Robot[] {attackRobot, agilityRobot, tankRobot}))
+        foreach (Robot robot in (new Robot[] {attackRobot, agilityRobot, tankRobot}))
         {
             robots.Add(robot.GetRobotID(), robot);
             robot.gameObject.SetActive(false);
@@ -54,11 +55,9 @@ public class Player : LivingObject {
 
         currentRobot = attackRobot;
         currentRobot.gameObject.SetActive(true);
-        setAnimatorToRobot(currentRobot);
+        SetAnimatorToRobot(currentRobot);
 
         if (!facingRight) invert = -1; else invert = 1;
-
-        Debug.Log(robotAnimator.gameObject.activeSelf);
     }
 
     void FixedUpdate()
@@ -88,7 +87,7 @@ public class Player : LivingObject {
         }
     }
 
-    void setAnimatorToRobot(Robot robot)
+    void SetAnimatorToRobot(Robot robot)
     {
         robotAnimator.transform.parent = robot.transform;
         robotAnimator.transform.position = robot.transform.position;
@@ -109,13 +108,14 @@ public class Player : LivingObject {
         previousRobot.CancelExtraSkill();
         previousRobot.gameObject.SetActive(false);
 
-        //Debug.Log(transform.InverseTransformPoint(currentRobot.gameObject.transform.position));
-        //animator.bodyPosition = gameObject.transform.position + transform.InverseTransformPoint(currentRobot.gameObject.transform.position);
-        //Debug.Log(transform.position);
-        setAnimatorToRobot(currentRobot);
+        SetAnimatorToRobot(currentRobot);
 
         // Change robot to new one
-        robotAnimator.SetInteger("RobotID", currentRobot.robotID);
+        if (robotAnimator.gameObject.activeSelf)
+        {
+            Debug.Log(robotAnimator.runtimeAnimatorController);
+            robotAnimator.SetInteger("RobotID", currentRobot.robotID);
+        }
         TriggerChangeRobot(previousRobot.robotID, newRobotID);
         currentRobot.gameObject.SetActive(true);
 
@@ -135,8 +135,11 @@ public class Player : LivingObject {
             to--;
 
         animationNumber = from * 2 + to;
-        robotAnimator.SetInteger("RobotChangeAnimationID", animationNumber);
-        robotAnimator.SetTrigger("ChangeRobotTrigger");
+        if (robotAnimator.gameObject.activeSelf)
+        {
+            robotAnimator.SetInteger("RobotChangeAnimationID", animationNumber);
+            robotAnimator.SetTrigger("ChangeRobotTrigger");
+        }
     }
 
     void CheckChangeRobot()

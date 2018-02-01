@@ -13,12 +13,12 @@ public class AnimationRenderer : MonoBehaviour {
         animator = GetComponent<Animator>();
 	}
 	
-    public SpriteRenderer getSpriteRenderer()
+    public SpriteRenderer GetSpriteRenderer()
     {
         return spriteRenderer;
     }
 
-    public Animator getAnimator()
+    public Animator GetAnimator()
     {
         return animator;
     }

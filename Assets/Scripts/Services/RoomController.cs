@@ -9,6 +9,7 @@ public class RoomController : MonoBehaviour {
 
     protected virtual void Start()
     {
+        // Register all rooms
         foreach (Room room in roomList)
         {
             room.RegisterListener(ChangeRoom);
@@ -21,6 +22,7 @@ public class RoomController : MonoBehaviour {
         UpdateRooms(roomInd);
     }
 
+    // Hide far rooms and show near room
     public void UpdateRooms(int centerRoomInd)
     {
         for(int ind = 0; ind < roomList.Count; ind++)
