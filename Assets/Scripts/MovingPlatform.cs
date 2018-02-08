@@ -18,6 +18,9 @@ public class MovingPlatform : MonoBehaviour {
     private Transform toPoint;
     private Rigidbody2D rb;
 
+    private List<GameObject> targets;
+    private Vector3 previousPosition;
+
     void Start () {
         if (points.Count < 2)
         {
@@ -27,6 +30,9 @@ public class MovingPlatform : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         toPoint = points[nextPointInd];
         Stop();
+
+        targets = new List<GameObject>();
+        previousPosition = transform.position;
 	}
 	
 	void Update () {
@@ -44,7 +50,14 @@ public class MovingPlatform : MonoBehaviour {
                 currentPointStopTime -= Time.deltaTime;
             }
         }
+
+        
 	}
+
+    private void LateUpdate()
+    {
+        UpdateTargets();
+    }
 
     void NextPoint()
     {
@@ -86,4 +99,26 @@ public class MovingPlatform : MonoBehaviour {
         rb.velocity = Vector3.zero;
         currentPointStopTime = pointStopTime;
     }
+
+    private void UpdateTargets()
+    {
+        foreach(GameObject target in targets)
+        {
+            target.transform.position += transform.position - previousPosition;
+        }
+
+        previousPosition = transform.position;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.tag);
+        targets.Add(collision.gameObject);
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        targets.Remove(collision.gameObject);
+    }
+
 }
