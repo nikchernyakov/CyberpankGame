@@ -242,6 +242,7 @@
     <Compile Include="Assets\Scripts\Gun.cs" />
     <Compile Include="Assets\Scripts\Handlers\JumpHandler.cs" />
     <Compile Include="Assets\Scripts\Handlers\MathHandler.cs" />
+    <Compile Include="Assets\Scripts\Handlers\SpeedController.cs" />
     <Compile Include="Assets\Scripts\Handlers\TagEnum.cs" />
     <Compile Include="Assets\Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\MovingPlatformWatcher.cs" />
