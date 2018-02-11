@@ -23,4 +23,25 @@ public class AnimationRenderer : MonoBehaviour {
         return animator;
     }
 
+    public void SetTrigger(string trigger)
+    {
+        animator.SetTrigger(trigger);
+    }
+
+    public void SetInteger(string key, int value)
+    {
+        animator.SetInteger(key, value);
+    }
+
+    public void SetBool(string key, bool value)
+    {
+        animator.SetBool(key, value);
+    }
+
+    public bool GetBool(string key)
+    {
+        return animator.GetBool(key);
+    }
+
+
 }

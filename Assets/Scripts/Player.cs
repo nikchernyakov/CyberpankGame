@@ -80,10 +80,10 @@ public class Player : LivingObject {
 
         if (zRotate) SetRotation();
 
-        if (robotAnimator.GetBool(currentRobot.GetHasGunValueName()) != currentRobot.hasGun)
+        if (animationRenderer.GetBool(currentRobot.GetHasGunValueName()) != currentRobot.hasGun)
         {
-            robotAnimator.SetBool(currentRobot.GetHasGunValueName(), currentRobot.hasGun);
-            robotAnimator.SetTrigger(currentRobot.GetGunTriggerName());
+            animationRenderer.SetBool(currentRobot.GetHasGunValueName(), currentRobot.hasGun);
+            animationRenderer.SetTrigger(currentRobot.GetGunTriggerName());
         }
     }
 
@@ -111,11 +111,7 @@ public class Player : LivingObject {
         SetAnimatorToRobot(currentRobot);
 
         // Change robot to new one
-        if (robotAnimator.gameObject.activeSelf)
-        {
-            Debug.Log(robotAnimator.runtimeAnimatorController);
-            robotAnimator.SetInteger("RobotID", currentRobot.robotID);
-        }
+        animationRenderer.SetInteger("RobotID", currentRobot.robotID);
         TriggerChangeRobot(previousRobot.robotID, newRobotID);
         currentRobot.gameObject.SetActive(true);
 
@@ -135,10 +131,10 @@ public class Player : LivingObject {
             to--;
 
         animationNumber = from * 2 + to;
-        if (robotAnimator.gameObject.activeSelf)
+        if (animationRenderer.gameObject.activeSelf)
         {
-            robotAnimator.SetInteger("RobotChangeAnimationID", animationNumber);
-            robotAnimator.SetTrigger("ChangeRobotTrigger");
+            animationRenderer.SetInteger("RobotChangeAnimationID", animationNumber);
+            animationRenderer.SetTrigger("ChangeRobotTrigger");
         }
     }
 
@@ -198,10 +194,10 @@ public class Player : LivingObject {
         // Triggers for animation
         if (move != 0)
         {
-            robotAnimator.SetTrigger("RobotRun");
+            animationRenderer.SetTrigger("RobotRun");
         } else
         {
-            robotAnimator.SetTrigger("RobotIdle");
+            animationRenderer.SetTrigger("RobotIdle");
         }
 
         Vector2 velocityVector = new Vector2(move * currentRobot.maxSpeed, rb.velocity.y);
