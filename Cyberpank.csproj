@@ -227,7 +227,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AnimationRenderer.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
-    <Compile Include="Assets\Scripts\Button.cs" />
     <Compile Include="Assets\Scripts\Common Classes\Damageble.cs" />
     <Compile Include="Assets\Scripts\Common Classes\Dieble.cs" />
     <Compile Include="Assets\Scripts\Common Classes\Doneble.cs" />
@@ -238,16 +237,19 @@
     <Compile Include="Assets\Scripts\Common Classes\Openble.cs" />
     <Compile Include="Assets\Scripts\Common Classes\Showeble.cs" />
     <Compile Include="Assets\Scripts\Common Classes\Takeble.cs" />
-    <Compile Include="Assets\Scripts\FallingObject.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Button.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\FallingObject.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\MovingPlatform.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\PressurePlate.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\SharpObject.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Turret.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
     <Compile Include="Assets\Scripts\Handlers\JumpHandler.cs" />
     <Compile Include="Assets\Scripts\Handlers\MathHandler.cs" />
     <Compile Include="Assets\Scripts\Handlers\SpeedController.cs" />
     <Compile Include="Assets\Scripts\Handlers\TagEnum.cs" />
-    <Compile Include="Assets\Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\MovingPlatformWatcher.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\PressurePlate.cs" />
     <Compile Include="Assets\Scripts\Robots\AgilityRobot.cs" />
     <Compile Include="Assets\Scripts\Robots\AttackRobot.cs" />
     <Compile Include="Assets\Scripts\Robots\Robot.cs" />
@@ -256,8 +258,6 @@
     <Compile Include="Assets\Scripts\Services\GameManager.cs" />
     <Compile Include="Assets\Scripts\Services\RoomController.cs" />
     <Compile Include="Assets\Scripts\Services\UIManager.cs" />
-    <Compile Include="Assets\Scripts\SharpObject.cs" />
-    <Compile Include="Assets\Scripts\Turret.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
