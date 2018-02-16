@@ -4,9 +4,36 @@ using UnityEngine;
 
 public class PressurePlate : Doneble {
 
-    public bool isPressed = true;
+    [System.Serializable]
+    public struct Plate
+    {
+
+        public Vector2 colliderSize;
+        public Sprite sprite;
+
+        public void SetSizeToCollider(BoxCollider2D collider)
+        {
+            collider.size = colliderSize;
+        }
+
+        public Sprite GetSprite()
+        {
+            return sprite;
+        }
+    }
+
+    [SerializeField]
+    public Plate pressedPlate;
+    [SerializeField]
+    public Plate emptyPlate;
+    private Plate currentPlate;
+
+    public bool isPressed = false;
     public int pressingObjectsCount = 0;
     public LayerMask whatIsPress;
+
+    private SpriteRenderer spriteRenderer;
+    private BoxCollider2D collider;
 
     public override bool IsDone()
     {
@@ -15,7 +42,10 @@ public class PressurePlate : Doneble {
 
 	// Use this for initialization
 	void Start () {
-		
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        collider = GetComponent<BoxCollider2D>();
+
+        ChangePlate(isPressed);
 	}
 	
 	// Update is called once per frame
@@ -26,8 +56,17 @@ public class PressurePlate : Doneble {
     public void ChangePress()
     {
         isPressed = !isPressed;
+        ChangePlate(isPressed);
 
         UpdateDone();
+    }
+
+    public void ChangePlate(bool isPressed)
+    {
+        currentPlate = isPressed ? pressedPlate : emptyPlate;
+        currentPlate.SetSizeToCollider(collider);
+        spriteRenderer.sprite = currentPlate.GetSprite();
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -51,7 +90,7 @@ public class PressurePlate : Doneble {
 
             if (pressingObjectsCount <= 0)
             {
-                pressingObjectsCount = pressingObjectsCount < 0 ? 0 : pressingObjectsCount;
+                pressingObjectsCount = 0;
                 ChangePress();
             }
         }
