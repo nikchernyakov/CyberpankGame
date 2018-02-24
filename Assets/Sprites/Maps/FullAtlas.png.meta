@@ -1,0 +1,1504 @@
+fileFormatVersion: 2
+guid: 018dc482822378d44851acd299016105
+timeCreated: 1519489423
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FullAltas_0
+    21300002: FullAltas_1
+    21300004: FullAltas_2
+    21300006: FullAltas_3
+    21300008: FullAltas_4
+    21300010: FullAltas_5
+    21300012: FullAltas_6
+    21300014: FullAltas_7
+    21300016: FullAltas_8
+    21300018: FullAltas_9
+    21300020: FullAltas_10
+    21300022: FullAltas_11
+    21300024: FullAltas_12
+    21300026: FullAltas_13
+    21300028: FullAltas_14
+    21300030: FullAltas_15
+    21300032: FullAltas_16
+    21300034: FullAltas_17
+    21300036: FullAltas_18
+    21300038: FullAltas_19
+    21300040: FullAltas_20
+    21300042: FullAltas_21
+    21300044: FullAltas_22
+    21300046: FullAltas_23
+    21300048: FullAltas_24
+    21300050: FullAltas_25
+    21300052: FullAltas_26
+    21300054: FullAltas_27
+    21300056: FullAltas_28
+    21300058: FullAltas_29
+    21300060: FullAltas_30
+    21300062: FullAltas_31
+    21300064: FullAltas_32
+    21300066: FullAltas_33
+    21300068: FullAltas_34
+    21300070: FullAltas_35
+    21300072: FullAltas_36
+    21300074: FullAltas_37
+    21300076: FullAltas_38
+    21300078: FullAltas_39
+    21300080: FullAltas_40
+    21300082: FullAltas_41
+    21300084: FullAltas_42
+    21300086: FullAltas_43
+    21300088: FullAltas_44
+    21300090: FullAltas_45
+    21300092: FullAltas_46
+    21300094: FullAltas_47
+    21300096: FullAltas_48
+    21300098: FullAltas_49
+    21300100: FullAltas_50
+    21300102: FullAltas_51
+    21300104: FullAltas_52
+    21300106: FullAltas_53
+    21300108: FullAltas_54
+    21300110: FullAltas_55
+    21300112: FullAltas_56
+    21300114: FullAltas_57
+    21300116: FullAltas_58
+    21300118: FullAltas_59
+    21300120: FullAltas_60
+    21300122: FullAltas_61
+    21300124: FullAltas_62
+    21300126: FullAltas_63
+    21300128: FullAltas_64
+    21300130: FullAltas_65
+    21300132: FullAltas_66
+    21300134: FullAltas_67
+    21300136: FullAltas_68
+    21300138: FullAltas_69
+    21300140: FullAltas_70
+    21300142: FullAltas_71
+    21300144: FullAltas_72
+    21300146: FullAltas_73
+    21300148: FullAltas_74
+    21300150: FullAltas_75
+    21300152: FullAltas_76
+    21300154: FullAltas_77
+    21300156: FullAltas_78
+    21300158: FullAltas_79
+    21300160: FullAltas_80
+    21300162: FullAltas_81
+    21300164: FullAltas_82
+    21300166: FullAltas_83
+    21300168: FullAltas_84
+    21300170: FullAltas_85
+    21300172: FullAltas_86
+    21300174: FullAtlas_0
+    21300176: FullAtlas_1
+    21300178: FullAtlas_2
+    21300180: FullAtlas_3
+    21300182: FullAtlas_4
+    21300184: FullAtlas_5
+    21300186: FullAtlas_6
+    21300188: FullAtlas_7
+    21300190: FullAtlas_8
+    21300192: FullAtlas_9
+    21300194: FullAtlas_10
+    21300196: FullAtlas_11
+    21300198: FullAtlas_12
+    21300200: FullAtlas_13
+    21300202: FullAtlas_14
+    21300204: FullAtlas_15
+    21300206: FullAtlas_16
+    21300208: FullAtlas_17
+    21300210: FullAtlas_18
+    21300212: FullAtlas_19
+    21300214: FullAtlas_20
+    21300216: FullAtlas_21
+    21300218: FullAtlas_22
+    21300220: FullAtlas_23
+    21300222: FullAtlas_24
+    21300224: FullAtlas_25
+    21300226: FullAtlas_26
+    21300228: FullAtlas_27
+    21300230: FullAtlas_28
+    21300232: FullAtlas_29
+    21300234: FullAtlas_30
+    21300236: FullAtlas_31
+    21300238: FullAtlas_32
+    21300240: FullAtlas_33
+    21300242: FullAtlas_34
+    21300244: FullAtlas_35
+    21300246: FullAtlas_36
+    21300248: FullAtlas_37
+    21300250: FullAtlas_38
+    21300252: FullAtlas_39
+    21300254: FullAtlas_40
+    21300256: FullAtlas_41
+    21300258: FullAtlas_42
+    21300260: FullAtlas_43
+    21300262: FullAtlas_44
+    21300264: FullAtlas_45
+    21300266: FullAtlas_46
+    21300268: FullAtlas_47
+    21300270: FullAtlas_48
+    21300272: FullAtlas_49
+    21300274: FullAtlas_50
+    21300276: FullAtlas_51
+    21300278: FullAtlas_52
+    21300280: FullAtlas_53
+    21300282: FullAtlas_54
+    21300284: FullAtlas_55
+    21300286: FullAtlas_56
+    21300288: FullAtlas_57
+    21300290: FullAtlas_58
+    21300292: FullAtlas_59
+    21300294: FullAtlas_60
+    21300296: FullAtlas_61
+    21300298: FullAtlas_62
+    21300300: FullAtlas_63
+    21300302: FullAtlas_64
+    21300304: FullAtlas_65
+    21300306: FullAtlas_66
+    21300308: FullAtlas_67
+    21300310: FullAtlas_68
+    21300312: FullAtlas_69
+    21300314: FullAtlas_70
+    21300316: FullAtlas_71
+    21300318: FullAtlas_72
+    21300320: FullAtlas_73
+    21300322: FullAtlas_74
+    21300324: FullAtlas_75
+    21300326: FullAtlas_76
+    21300328: FullAtlas_77
+    21300330: FullAtlas_78
+    21300332: FullAtlas_79
+    21300334: FullAtlas_80
+    21300336: FullAtlas_81
+    21300338: FullAtlas_82
+    21300340: FullAtlas_83
+    21300342: FullAtlas_84
+    21300344: FullAtlas_85
+    21300346: FullAtlas_86
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FullAtlas_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 3238
+        width: 363
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_1
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 3238
+        width: 364
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 3238
+        width: 365
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_3
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 3238
+        width: 365
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_4
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 3238
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_5
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 3238
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_6
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 3238
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 2338
+        y: 3238
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_8
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 3058
+        width: 345
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_9
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 3077
+        width: 163
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 2998
+        width: 363
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_11
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 2998
+        width: 364
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_12
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 2998
+        width: 365
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 2998
+        width: 365
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 2998
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 2998
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 2998
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_17
+      rect:
+        serializedVersion: 2
+        x: 2338
+        y: 2998
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_18
+      rect:
+        serializedVersion: 2
+        x: 2557
+        y: 2598
+        width: 425
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_19
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 2638
+        width: 204
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_20
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 2778
+        width: 363
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_21
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 2778
+        width: 364
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_22
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 2778
+        width: 365
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_23
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 2778
+        width: 365
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_24
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 2778
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_25
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 2778
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_26
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 2778
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_27
+      rect:
+        serializedVersion: 2
+        x: 2338
+        y: 2778
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_28
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 2538
+        width: 363
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_29
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 2538
+        width: 364
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_30
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 2538
+        width: 365
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_31
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 2538
+        width: 365
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_32
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 2538
+        width: 184
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_33
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 2538
+        width: 184
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_34
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 2538
+        width: 184
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_35
+      rect:
+        serializedVersion: 2
+        x: 2338
+        y: 2538
+        width: 184
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_36
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 2179
+        width: 384
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_37
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 2197
+        width: 204
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_38
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 2138
+        width: 363
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_39
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 2138
+        width: 364
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_40
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 2138
+        width: 365
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_41
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 2278
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_42
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 2337
+        width: 205
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_43
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 2258
+        width: 144
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_44
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 2317
+        width: 44
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_45
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 2358
+        width: 123
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_46
+      rect:
+        serializedVersion: 2
+        x: 2198
+        y: 2118
+        width: 344
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_47
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 2038
+        width: 484
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_48
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 2038
+        width: 444
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_49
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 2038
+        width: 484
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_50
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 2038
+        width: 485
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_51
+      rect:
+        serializedVersion: 2
+        x: 2578
+        y: 1698
+        width: 424
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_52
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 1698
+        width: 215
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_53
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1538
+        width: 465
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_54
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 1538
+        width: 465
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_55
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 1538
+        width: 463
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_56
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 1538
+        width: 462
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_57
+      rect:
+        serializedVersion: 2
+        x: 2039
+        y: 1538
+        width: 463
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_58
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 1358
+        width: 283
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_59
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 1358
+        width: 145
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_60
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 819
+        width: 163
+        height: 643
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_61
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 819
+        width: 164
+        height: 643
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_62
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 819
+        width: 165
+        height: 643
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_63
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 819
+        width: 164
+        height: 643
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_64
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 819
+        width: 164
+        height: 643
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_65
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 1138
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_66
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 1138
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_67
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 1138
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_68
+      rect:
+        serializedVersion: 2
+        x: 2218
+        y: 1138
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_69
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 918
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_70
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 918
+        width: 204
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_71
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 778
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_72
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 778
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_73
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 778
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_74
+      rect:
+        serializedVersion: 2
+        x: 2218
+        y: 778
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_75
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 538
+        width: 345
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_76
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 538
+        width: 184
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_77
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 38
+        width: 163
+        height: 725
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_78
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 38
+        width: 164
+        height: 725
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_79
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 38
+        width: 165
+        height: 725
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_80
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 38
+        width: 164
+        height: 725
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_81
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 38
+        width: 164
+        height: 725
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_82
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 217
+        width: 164
+        height: 505
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_83
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 217
+        width: 164
+        height: 505
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_84
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 217
+        width: 164
+        height: 505
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_85
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 217
+        width: 164
+        height: 505
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FullAtlas_86
+      rect:
+        serializedVersion: 2
+        x: 1937
+        y: 217
+        width: 166
+        height: 505
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
