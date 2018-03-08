@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 018dc482822378d44851acd299016105
-timeCreated: 1519489423
+timeCreated: 1520519947
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -205,7 +205,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -231,46 +231,46 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: iPhone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -282,10 +282,10 @@ TextureImporter:
       name: FullAtlas_0
       rect:
         serializedVersion: 2
-        x: 38
-        y: 3238
-        width: 363
-        height: 184
+        x: 40
+        y: 3240
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,10 +296,10 @@ TextureImporter:
       name: FullAtlas_1
       rect:
         serializedVersion: 2
-        x: 438
-        y: 3238
-        width: 364
-        height: 184
+        x: 440
+        y: 3240
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,10 +310,10 @@ TextureImporter:
       name: FullAtlas_2
       rect:
         serializedVersion: 2
-        x: 837
-        y: 3238
-        width: 365
-        height: 184
+        x: 840
+        y: 3240
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,10 +324,10 @@ TextureImporter:
       name: FullAtlas_3
       rect:
         serializedVersion: 2
-        x: 1238
-        y: 3238
-        width: 365
-        height: 184
+        x: 1240
+        y: 3240
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -338,10 +338,10 @@ TextureImporter:
       name: FullAtlas_4
       rect:
         serializedVersion: 2
-        x: 1638
-        y: 3238
-        width: 184
-        height: 184
+        x: 1640
+        y: 3240
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,10 +352,10 @@ TextureImporter:
       name: FullAtlas_5
       rect:
         serializedVersion: 2
-        x: 1878
-        y: 3238
-        width: 184
-        height: 184
+        x: 1880
+        y: 3240
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,10 +366,10 @@ TextureImporter:
       name: FullAtlas_6
       rect:
         serializedVersion: 2
-        x: 2098
-        y: 3238
-        width: 184
-        height: 184
+        x: 2100
+        y: 3240
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -380,10 +380,10 @@ TextureImporter:
       name: FullAtlas_7
       rect:
         serializedVersion: 2
-        x: 2338
-        y: 3238
-        width: 184
-        height: 184
+        x: 2340
+        y: 3240
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,10 +394,10 @@ TextureImporter:
       name: FullAtlas_8
       rect:
         serializedVersion: 2
-        x: 2598
-        y: 3058
-        width: 345
-        height: 364
+        x: 2600
+        y: 3060
+        width: 340
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -408,10 +408,10 @@ TextureImporter:
       name: FullAtlas_9
       rect:
         serializedVersion: 2
-        x: 3058
-        y: 3077
-        width: 163
-        height: 345
+        x: 3060
+        y: 3080
+        width: 160
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -422,10 +422,10 @@ TextureImporter:
       name: FullAtlas_10
       rect:
         serializedVersion: 2
-        x: 38
-        y: 2998
-        width: 363
-        height: 184
+        x: 40
+        y: 3000
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,10 +436,10 @@ TextureImporter:
       name: FullAtlas_11
       rect:
         serializedVersion: 2
-        x: 438
-        y: 2998
-        width: 364
-        height: 184
+        x: 440
+        y: 3000
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -450,10 +450,10 @@ TextureImporter:
       name: FullAtlas_12
       rect:
         serializedVersion: 2
-        x: 837
-        y: 2998
-        width: 365
-        height: 184
+        x: 840
+        y: 3000
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -464,10 +464,10 @@ TextureImporter:
       name: FullAtlas_13
       rect:
         serializedVersion: 2
-        x: 1238
-        y: 2998
-        width: 365
-        height: 184
+        x: 1240
+        y: 3000
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,10 +478,10 @@ TextureImporter:
       name: FullAtlas_14
       rect:
         serializedVersion: 2
-        x: 1638
-        y: 2998
-        width: 184
-        height: 184
+        x: 1640
+        y: 3000
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -492,10 +492,10 @@ TextureImporter:
       name: FullAtlas_15
       rect:
         serializedVersion: 2
-        x: 1878
-        y: 2998
-        width: 184
-        height: 184
+        x: 1880
+        y: 3000
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -506,10 +506,10 @@ TextureImporter:
       name: FullAtlas_16
       rect:
         serializedVersion: 2
-        x: 2098
-        y: 2998
-        width: 184
-        height: 184
+        x: 2100
+        y: 3000
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -520,10 +520,10 @@ TextureImporter:
       name: FullAtlas_17
       rect:
         serializedVersion: 2
-        x: 2338
-        y: 2998
-        width: 184
-        height: 184
+        x: 2340
+        y: 3000
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -534,10 +534,10 @@ TextureImporter:
       name: FullAtlas_18
       rect:
         serializedVersion: 2
-        x: 2557
-        y: 2598
-        width: 425
-        height: 424
+        x: 2560
+        y: 2600
+        width: 420
+        height: 420
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -548,10 +548,10 @@ TextureImporter:
       name: FullAtlas_19
       rect:
         serializedVersion: 2
-        x: 3058
-        y: 2638
-        width: 204
-        height: 384
+        x: 3060
+        y: 2640
+        width: 200
+        height: 380
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -562,10 +562,10 @@ TextureImporter:
       name: FullAtlas_20
       rect:
         serializedVersion: 2
-        x: 38
-        y: 2778
-        width: 363
-        height: 184
+        x: 40
+        y: 2780
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -576,10 +576,10 @@ TextureImporter:
       name: FullAtlas_21
       rect:
         serializedVersion: 2
-        x: 438
-        y: 2778
-        width: 364
-        height: 184
+        x: 440
+        y: 2780
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -590,10 +590,10 @@ TextureImporter:
       name: FullAtlas_22
       rect:
         serializedVersion: 2
-        x: 837
-        y: 2778
-        width: 365
-        height: 184
+        x: 840
+        y: 2780
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -604,10 +604,10 @@ TextureImporter:
       name: FullAtlas_23
       rect:
         serializedVersion: 2
-        x: 1238
-        y: 2778
-        width: 365
-        height: 184
+        x: 1240
+        y: 2780
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -618,10 +618,10 @@ TextureImporter:
       name: FullAtlas_24
       rect:
         serializedVersion: 2
-        x: 1638
-        y: 2778
-        width: 184
-        height: 184
+        x: 1640
+        y: 2780
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -632,10 +632,10 @@ TextureImporter:
       name: FullAtlas_25
       rect:
         serializedVersion: 2
-        x: 1878
-        y: 2778
-        width: 184
-        height: 184
+        x: 1880
+        y: 2780
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -646,10 +646,10 @@ TextureImporter:
       name: FullAtlas_26
       rect:
         serializedVersion: 2
-        x: 2098
-        y: 2778
-        width: 184
-        height: 184
+        x: 2100
+        y: 2780
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -660,10 +660,10 @@ TextureImporter:
       name: FullAtlas_27
       rect:
         serializedVersion: 2
-        x: 2338
-        y: 2778
-        width: 184
-        height: 184
+        x: 2340
+        y: 2780
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -674,10 +674,10 @@ TextureImporter:
       name: FullAtlas_28
       rect:
         serializedVersion: 2
-        x: 38
-        y: 2538
-        width: 363
-        height: 185
+        x: 40
+        y: 2540
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -688,10 +688,10 @@ TextureImporter:
       name: FullAtlas_29
       rect:
         serializedVersion: 2
-        x: 438
-        y: 2538
-        width: 364
-        height: 185
+        x: 440
+        y: 2540
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -702,10 +702,10 @@ TextureImporter:
       name: FullAtlas_30
       rect:
         serializedVersion: 2
-        x: 837
-        y: 2538
-        width: 365
-        height: 185
+        x: 840
+        y: 2540
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -716,10 +716,10 @@ TextureImporter:
       name: FullAtlas_31
       rect:
         serializedVersion: 2
-        x: 1238
-        y: 2538
-        width: 365
-        height: 185
+        x: 1240
+        y: 2540
+        width: 360
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -730,10 +730,10 @@ TextureImporter:
       name: FullAtlas_32
       rect:
         serializedVersion: 2
-        x: 1638
-        y: 2538
-        width: 184
-        height: 185
+        x: 1640
+        y: 2540
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -744,10 +744,10 @@ TextureImporter:
       name: FullAtlas_33
       rect:
         serializedVersion: 2
-        x: 1878
-        y: 2538
-        width: 184
-        height: 185
+        x: 1880
+        y: 2540
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -758,10 +758,10 @@ TextureImporter:
       name: FullAtlas_34
       rect:
         serializedVersion: 2
-        x: 2098
-        y: 2538
-        width: 184
-        height: 185
+        x: 2100
+        y: 2540
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -772,10 +772,10 @@ TextureImporter:
       name: FullAtlas_35
       rect:
         serializedVersion: 2
-        x: 2338
-        y: 2538
-        width: 184
-        height: 185
+        x: 2340
+        y: 2540
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -786,10 +786,10 @@ TextureImporter:
       name: FullAtlas_36
       rect:
         serializedVersion: 2
-        x: 2598
-        y: 2179
-        width: 384
-        height: 383
+        x: 2600
+        y: 2180
+        width: 380
+        height: 380
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -800,10 +800,10 @@ TextureImporter:
       name: FullAtlas_37
       rect:
         serializedVersion: 2
-        x: 3058
-        y: 2197
-        width: 204
-        height: 385
+        x: 3060
+        y: 2200
+        width: 200
+        height: 380
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -814,10 +814,10 @@ TextureImporter:
       name: FullAtlas_38
       rect:
         serializedVersion: 2
-        x: 38
-        y: 2138
-        width: 363
-        height: 364
+        x: 40
+        y: 2140
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -828,10 +828,10 @@ TextureImporter:
       name: FullAtlas_39
       rect:
         serializedVersion: 2
-        x: 438
-        y: 2138
-        width: 364
-        height: 364
+        x: 440
+        y: 2140
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -842,10 +842,10 @@ TextureImporter:
       name: FullAtlas_40
       rect:
         serializedVersion: 2
-        x: 837
-        y: 2138
-        width: 365
-        height: 364
+        x: 840
+        y: 2140
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -856,10 +856,10 @@ TextureImporter:
       name: FullAtlas_41
       rect:
         serializedVersion: 2
-        x: 1278
-        y: 2278
-        width: 144
-        height: 144
+        x: 1280
+        y: 2280
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -870,10 +870,10 @@ TextureImporter:
       name: FullAtlas_42
       rect:
         serializedVersion: 2
-        x: 1437
-        y: 2337
-        width: 205
-        height: 26
+        x: 1440
+        y: 2340
+        width: 200
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -884,10 +884,10 @@ TextureImporter:
       name: FullAtlas_43
       rect:
         serializedVersion: 2
-        x: 1678
-        y: 2258
-        width: 144
-        height: 184
+        x: 1680
+        y: 2260
+        width: 140
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -898,10 +898,10 @@ TextureImporter:
       name: FullAtlas_44
       rect:
         serializedVersion: 2
-        x: 1878
-        y: 2317
-        width: 44
-        height: 65
+        x: 1880
+        y: 2320
+        width: 40
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -912,10 +912,10 @@ TextureImporter:
       name: FullAtlas_45
       rect:
         serializedVersion: 2
-        x: 1998
-        y: 2358
-        width: 123
-        height: 144
+        x: 2000
+        y: 2360
+        width: 120
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -926,10 +926,10 @@ TextureImporter:
       name: FullAtlas_46
       rect:
         serializedVersion: 2
-        x: 2198
-        y: 2118
-        width: 344
-        height: 344
+        x: 2200
+        y: 2120
+        width: 340
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -940,10 +940,10 @@ TextureImporter:
       name: FullAtlas_47
       rect:
         serializedVersion: 2
-        x: 58
-        y: 2038
-        width: 484
-        height: 64
+        x: 60
+        y: 2040
+        width: 480
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -954,10 +954,10 @@ TextureImporter:
       name: FullAtlas_48
       rect:
         serializedVersion: 2
-        x: 618
-        y: 2038
-        width: 444
-        height: 44
+        x: 620
+        y: 2040
+        width: 440
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -968,10 +968,10 @@ TextureImporter:
       name: FullAtlas_49
       rect:
         serializedVersion: 2
-        x: 1098
-        y: 2038
-        width: 484
-        height: 64
+        x: 1100
+        y: 2040
+        width: 480
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -982,10 +982,10 @@ TextureImporter:
       name: FullAtlas_50
       rect:
         serializedVersion: 2
-        x: 1618
-        y: 2038
-        width: 485
-        height: 64
+        x: 1620
+        y: 2040
+        width: 480
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -996,10 +996,10 @@ TextureImporter:
       name: FullAtlas_51
       rect:
         serializedVersion: 2
-        x: 2578
-        y: 1698
-        width: 424
-        height: 425
+        x: 2580
+        y: 1700
+        width: 420
+        height: 420
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1010,10 +1010,10 @@ TextureImporter:
       name: FullAtlas_52
       rect:
         serializedVersion: 2
-        x: 3058
-        y: 1698
-        width: 215
-        height: 425
+        x: 3060
+        y: 1700
+        width: 213
+        height: 420
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1024,10 +1024,10 @@ TextureImporter:
       name: FullAtlas_53
       rect:
         serializedVersion: 2
-        x: 38
-        y: 1538
-        width: 465
-        height: 483
+        x: 40
+        y: 1540
+        width: 460
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1038,10 +1038,10 @@ TextureImporter:
       name: FullAtlas_54
       rect:
         serializedVersion: 2
-        x: 538
-        y: 1538
-        width: 465
-        height: 483
+        x: 540
+        y: 1540
+        width: 460
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1052,10 +1052,10 @@ TextureImporter:
       name: FullAtlas_55
       rect:
         serializedVersion: 2
-        x: 1038
-        y: 1538
-        width: 463
-        height: 483
+        x: 1040
+        y: 1540
+        width: 460
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1066,10 +1066,10 @@ TextureImporter:
       name: FullAtlas_56
       rect:
         serializedVersion: 2
-        x: 1539
-        y: 1538
-        width: 462
-        height: 483
+        x: 1540
+        y: 1540
+        width: 460
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1080,10 +1080,10 @@ TextureImporter:
       name: FullAtlas_57
       rect:
         serializedVersion: 2
-        x: 2039
-        y: 1538
-        width: 463
-        height: 483
+        x: 2040
+        y: 1540
+        width: 460
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1094,10 +1094,10 @@ TextureImporter:
       name: FullAtlas_58
       rect:
         serializedVersion: 2
-        x: 2639
-        y: 1358
-        width: 283
-        height: 283
+        x: 2640
+        y: 1360
+        width: 280
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1108,10 +1108,10 @@ TextureImporter:
       name: FullAtlas_59
       rect:
         serializedVersion: 2
-        x: 3058
-        y: 1358
-        width: 145
-        height: 283
+        x: 3060
+        y: 1360
+        width: 140
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1122,10 +1122,10 @@ TextureImporter:
       name: FullAtlas_60
       rect:
         serializedVersion: 2
-        x: 79
-        y: 819
-        width: 163
-        height: 643
+        x: 80
+        y: 820
+        width: 160
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1136,10 +1136,10 @@ TextureImporter:
       name: FullAtlas_61
       rect:
         serializedVersion: 2
-        x: 278
-        y: 819
-        width: 164
-        height: 643
+        x: 280
+        y: 820
+        width: 160
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1150,10 +1150,10 @@ TextureImporter:
       name: FullAtlas_62
       rect:
         serializedVersion: 2
-        x: 477
-        y: 819
-        width: 165
-        height: 643
+        x: 480
+        y: 820
+        width: 160
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1164,10 +1164,10 @@ TextureImporter:
       name: FullAtlas_63
       rect:
         serializedVersion: 2
-        x: 678
-        y: 819
-        width: 164
-        height: 643
+        x: 680
+        y: 820
+        width: 160
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1178,10 +1178,10 @@ TextureImporter:
       name: FullAtlas_64
       rect:
         serializedVersion: 2
-        x: 878
-        y: 819
-        width: 164
-        height: 643
+        x: 880
+        y: 820
+        width: 160
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1192,10 +1192,10 @@ TextureImporter:
       name: FullAtlas_65
       rect:
         serializedVersion: 2
-        x: 1138
-        y: 1138
-        width: 324
-        height: 324
+        x: 1140
+        y: 1140
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1206,10 +1206,10 @@ TextureImporter:
       name: FullAtlas_66
       rect:
         serializedVersion: 2
-        x: 1498
-        y: 1138
-        width: 324
-        height: 324
+        x: 1500
+        y: 1140
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1220,10 +1220,10 @@ TextureImporter:
       name: FullAtlas_67
       rect:
         serializedVersion: 2
-        x: 1858
-        y: 1138
-        width: 324
-        height: 324
+        x: 1860
+        y: 1140
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1234,10 +1234,10 @@ TextureImporter:
       name: FullAtlas_68
       rect:
         serializedVersion: 2
-        x: 2218
-        y: 1138
-        width: 324
-        height: 324
+        x: 2220
+        y: 1140
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1248,10 +1248,10 @@ TextureImporter:
       name: FullAtlas_69
       rect:
         serializedVersion: 2
-        x: 2598
-        y: 918
-        width: 384
-        height: 384
+        x: 2600
+        y: 920
+        width: 380
+        height: 380
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1262,10 +1262,10 @@ TextureImporter:
       name: FullAtlas_70
       rect:
         serializedVersion: 2
-        x: 3058
-        y: 918
-        width: 204
-        height: 384
+        x: 3060
+        y: 920
+        width: 200
+        height: 380
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1276,10 +1276,10 @@ TextureImporter:
       name: FullAtlas_71
       rect:
         serializedVersion: 2
-        x: 1138
-        y: 778
-        width: 324
-        height: 324
+        x: 1140
+        y: 780
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1290,10 +1290,10 @@ TextureImporter:
       name: FullAtlas_72
       rect:
         serializedVersion: 2
-        x: 1498
-        y: 778
-        width: 324
-        height: 324
+        x: 1500
+        y: 780
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1304,10 +1304,10 @@ TextureImporter:
       name: FullAtlas_73
       rect:
         serializedVersion: 2
-        x: 1858
-        y: 778
-        width: 324
-        height: 324
+        x: 1860
+        y: 780
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1318,10 +1318,10 @@ TextureImporter:
       name: FullAtlas_74
       rect:
         serializedVersion: 2
-        x: 2218
-        y: 778
-        width: 324
-        height: 324
+        x: 2220
+        y: 780
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1332,10 +1332,10 @@ TextureImporter:
       name: FullAtlas_75
       rect:
         serializedVersion: 2
-        x: 2598
-        y: 538
-        width: 345
-        height: 345
+        x: 2600
+        y: 540
+        width: 340
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1346,10 +1346,10 @@ TextureImporter:
       name: FullAtlas_76
       rect:
         serializedVersion: 2
-        x: 3058
-        y: 538
-        width: 184
-        height: 345
+        x: 3060
+        y: 540
+        width: 180
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1360,10 +1360,10 @@ TextureImporter:
       name: FullAtlas_77
       rect:
         serializedVersion: 2
-        x: 79
-        y: 38
-        width: 163
-        height: 725
+        x: 80
+        y: 40
+        width: 160
+        height: 720
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1374,10 +1374,10 @@ TextureImporter:
       name: FullAtlas_78
       rect:
         serializedVersion: 2
-        x: 278
-        y: 38
-        width: 164
-        height: 725
+        x: 280
+        y: 40
+        width: 160
+        height: 720
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1388,10 +1388,10 @@ TextureImporter:
       name: FullAtlas_79
       rect:
         serializedVersion: 2
-        x: 477
-        y: 38
-        width: 165
-        height: 725
+        x: 480
+        y: 40
+        width: 160
+        height: 720
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1402,10 +1402,10 @@ TextureImporter:
       name: FullAtlas_80
       rect:
         serializedVersion: 2
-        x: 678
-        y: 38
-        width: 164
-        height: 725
+        x: 680
+        y: 40
+        width: 160
+        height: 720
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1416,10 +1416,10 @@ TextureImporter:
       name: FullAtlas_81
       rect:
         serializedVersion: 2
-        x: 878
-        y: 38
-        width: 164
-        height: 725
+        x: 880
+        y: 40
+        width: 160
+        height: 720
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1430,10 +1430,10 @@ TextureImporter:
       name: FullAtlas_82
       rect:
         serializedVersion: 2
-        x: 1138
-        y: 217
-        width: 164
-        height: 505
+        x: 1140
+        y: 220
+        width: 160
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1444,10 +1444,10 @@ TextureImporter:
       name: FullAtlas_83
       rect:
         serializedVersion: 2
-        x: 1337
-        y: 217
-        width: 164
-        height: 505
+        x: 1340
+        y: 220
+        width: 160
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1458,10 +1458,10 @@ TextureImporter:
       name: FullAtlas_84
       rect:
         serializedVersion: 2
-        x: 1538
-        y: 217
-        width: 164
-        height: 505
+        x: 1540
+        y: 220
+        width: 160
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1472,10 +1472,10 @@ TextureImporter:
       name: FullAtlas_85
       rect:
         serializedVersion: 2
-        x: 1738
-        y: 217
-        width: 164
-        height: 505
+        x: 1740
+        y: 220
+        width: 160
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1486,10 +1486,10 @@ TextureImporter:
       name: FullAtlas_86
       rect:
         serializedVersion: 2
-        x: 1937
-        y: 217
-        width: 166
-        height: 505
+        x: 1940
+        y: 220
+        width: 160
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
