@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 11
+  controlID: 104
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &8
 MonoBehaviour:
@@ -420,18 +420,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs/Blocks
+    - Assets/Sprites
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Blocks
+  - Assets/Sprites/Test
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Programming\GameDev\Cyberpank
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 123}
-    m_SelectedIDs: 442a0000
-    m_LastClickedID: 10820
+    scrollPos: {x: 0, y: 107}
+    m_SelectedIDs: 32330000
+    m_LastClickedID: 13106
     m_ExpandedIDs: 0000000066270000883000005a3200003233000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300009a250000f424000070280000e2250000cadef4ff0c2800000628000048450000e8c4feff8c9ffeff5a8afeff38290000d2e80000ea28000000270000a42a0000562f000000000000e62a0000d0280000082e0000ae2c000014300000e6420000823e0000002c0000ea2f0000c4840000ce2e00006e2f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -576,23 +576,23 @@ MonoBehaviour:
     height: 439
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 44f1ffff
-    m_LastClickedID: -3772
-    m_ExpandedIDs: a6fbffff000000008c340000a43800002c3a00003c3a0000c43a0000f03e0000123f00008e3f0000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: a6fbffff000000008c340000383500000237000006370000a63700000a380000343800003e390000743a0000783b0000fe3b0000f03e0000083f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: MovingBox (1)
+      m_OriginalName: MovingBox (1)
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -4272
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -628,14 +628,14 @@ MonoBehaviour:
     width: 1051
     height: 439
   m_SceneLighting: 1
-  lastFramingTime: 2427.886297593037
+  lastFramingTime: 4497.66042720031
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -35.70311, y: 79.63874, z: 84.3125}
+    m_Target: {x: 62.385685, y: 20.172829, z: 99.71875}
     speed: 2
-    m_Value: {x: -35.70311, y: 79.63874, z: 84.3125}
+    m_Value: {x: 62.385685, y: 20.172829, z: 99.71875}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -662,9 +662,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 295.8025
+    m_Target: 36.888863
     speed: 2
-    m_Value: 295.8025
+    m_Value: 36.888863
   m_Ortho:
     m_Target: 1
     speed: 2
