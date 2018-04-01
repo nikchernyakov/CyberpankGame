@@ -40,8 +40,8 @@ MonoBehaviour:
     y: 0
     width: 352
     height: 460
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -65,8 +65,8 @@ MonoBehaviour:
     y: 0
     width: 703
     height: 460
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -117,8 +117,8 @@ MonoBehaviour:
     y: 0
     width: 279
     height: 731
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -451,19 +451,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs/Bounds
+    - Assets/Plugins
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Bounds
+  - Assets/Plugins
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Programming\GameDev\Cyberpank
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 83}
-    m_SelectedIDs: d4280000
-    m_LastClickedID: 10452
-    m_ExpandedIDs: 00000000682700007c270000ac2700000e2a0000842a0000242b0000782b0000bc2b0000e03a000000ca9a3bffffff7f
+    m_SelectedIDs: 90270000
+    m_LastClickedID: 10128
+    m_ExpandedIDs: 00000000682700007c270000ac2700000e2a0000842a0000242b0000782b0000bc2b0000003b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -491,7 +491,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000682700007c270000ac2700000e2a0000842a0000242b0000782b0000bc2b0000e03a0000
+    m_ExpandedIDs: 00000000682700007c270000ac2700000e2a0000842a0000242b0000782b0000bc2b0000003b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -606,24 +606,24 @@ MonoBehaviour:
     width: 200
     height: 439
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0a2c0000
-    m_LastClickedID: 11274
-    m_ExpandedIDs: a6fbffff000000000a2c0000942d0000ca2f0000ea2f0000483200003a340000f2350000f03600001c37000020370000
+    scrollPos: {x: 0, y: 42}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: a6fbffff000000005c2c0000f02e0000122f0000442f0000f02f00008c300000b6300000f030000040320000ce320000043700008e370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Room 2
+      m_OriginalName: Room 2
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 12600
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
@@ -659,14 +659,14 @@ MonoBehaviour:
     width: 699
     height: 439
   m_SceneLighting: 1
-  lastFramingTime: 59.26066505355514
+  lastFramingTime: 98.7797888927948
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 58.93262, y: 62.218353, z: -0.9133307}
+    m_Target: {x: 78.75669, y: 72.673584, z: 99.46875}
     speed: 2
-    m_Value: {x: 58.93262, y: 62.218353, z: -0.9133307}
+    m_Value: {x: 78.75669, y: 72.673584, z: 99.46875}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -693,9 +693,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 96.987274
+    m_Target: 105.0713
     speed: 2
-    m_Value: 96.987274
+    m_Value: 105.0713
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -763,18 +763,18 @@ MonoBehaviour:
       y: 17
       width: 348
       height: 422
-    m_Scale: {x: 1.1893739, y: 1.1893739}
-    m_Translation: {x: 141.04898, y: 226.0434}
+    m_Scale: {x: 1.2667699, y: 1.2667699}
+    m_Translation: {x: 197.77379, y: 188.86658}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -118.59096
-      y: -190.05243
-      width: 292.59094
-      height: 354.80853
+      x: -156.12448
+      y: -149.09305
+      width: 274.71445
+      height: 333.13074
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
