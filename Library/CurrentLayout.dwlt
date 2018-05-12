@@ -65,8 +65,8 @@ MonoBehaviour:
     y: 0
     width: 703
     height: 432
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -117,8 +117,8 @@ MonoBehaviour:
     y: 0
     width: 279
     height: 731
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -436,18 +436,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs/Bounds
+    - Assets/Prefabs/GameObjects/Platforms
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Bounds
+  - Assets/Prefabs/GameObjects/Platforms
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Programming\GameDev\Cyberpank
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 50}
-    m_SelectedIDs: 2a290000
-    m_LastClickedID: 10538
+    m_SelectedIDs: 242c0000
+    m_LastClickedID: 11300
     m_ExpandedIDs: 00000000bc270000ce27000000280000662a0000e62a0000882b0000e02b0000262c0000e23a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -503,7 +503,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009a250000f424000070280000e2250000cadef4ff0c2800000628000048450000e8c4feff8c9ffeff5a8afeff38290000d2e80000ea28000000270000a42a0000562f0000e62a0000d0280000082e0000ae2c000014300000e6420000823e0000002c0000ea2f0000c4840000ce2e00006e2f0000d8c4e0ffde27000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -596,7 +596,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 4a320000
     m_LastClickedID: 12874
-    m_ExpandedIDs: 9efbffff00000000742c0000ae2c0000bc31000034340000d63600000c3700003437000070370000
+    m_ExpandedIDs: 9efbffff00000000202d0000d42e0000e0300000a03200004034000084360000d63600007e37000086370000f6370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -647,14 +647,14 @@ MonoBehaviour:
     height: 411
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 2177.555882853548
+  lastFramingTime: 3767.1826213541995
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 71.98273, y: 120.77204, z: 99.28125}
+    m_Target: {x: 49.53227, y: 106.3222, z: 98.97304}
     speed: 2
-    m_Value: {x: 71.98273, y: 120.77204, z: 99.28125}
+    m_Value: {x: 49.53227, y: 106.3222, z: 98.97304}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -682,9 +682,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 74.07302
+    m_Target: 102.73202
     speed: 2
-    m_Value: 74.07302
+    m_Value: 102.73202
   m_Ortho:
     m_Target: 1
     speed: 2
