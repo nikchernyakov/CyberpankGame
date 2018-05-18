@@ -8,11 +8,10 @@ public class GameObjectsGenerator : MonoBehaviour {
     private GameObject objectForGenerate;
 
     [SerializeField]
-    private List<Transform> placesForGenerate;
+    private Transform placeForGenerate;
 
     public void Generate()
     {
-        foreach (Transform place in placesForGenerate)
-            Instantiate(objectForGenerate, place);
+            Instantiate(objectForGenerate, placeForGenerate);
     }
 }
