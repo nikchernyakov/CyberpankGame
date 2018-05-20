@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DonebleChecker : MonoBehaviour {
+/*
+ * Script is register UpdateDone() method for event listening in all Doneble events
+ * that this script contains.
+ */
+public abstract class DonebleChecker : MonoBehaviour {
 
     public List<Doneble> donebleList;
 
@@ -14,11 +18,14 @@ public class DonebleChecker : MonoBehaviour {
         }
     }
 
-    public virtual void UpdateDone(Doneble donebleObject)
-    {
-        
-    }
+    /*
+     * Method that is invoking when some of event was updated
+     */
+    public abstract void UpdateDone(Doneble donebleObject);
 
+    /*
+     * Method check all Doneble from list that they have a 'needDone' state
+     */
     protected bool CheckDonebleList(bool needDone)
     {
         foreach (Doneble donebleElement in donebleList)

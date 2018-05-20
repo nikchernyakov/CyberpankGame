@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Openable : DonebleChecker{
+public class Openable : DonebleChecker {
     public bool isOpen = false;
 
     public void ChangeOpen()
@@ -12,8 +12,6 @@ public class Openable : DonebleChecker{
 
     public override void UpdateDone(Doneble donebleObject)
     {
-        base.UpdateDone(donebleObject);
-
         bool needChangeOpen = false;   
         if (isOpen && !donebleObject.IsDone())
         {

@@ -1,11 +1,12 @@
-﻿public class ObjectShower : DonebleChecker {
+﻿/*
+ * Script that Show or Hide object when Doneble event is happened
+ */ 
+public class ObjectShower : DonebleChecker {
 
     public Showable target;
 
     public override void UpdateDone(Doneble donebleObject)
     {
-        base.UpdateDone(donebleObject);
-
         if (CheckDonebleList(true))
         {
             ShowObject();

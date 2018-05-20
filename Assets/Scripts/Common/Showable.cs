@@ -1,7 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/*
+ * Script for show or hiding object
+ */
 public class Showable : MonoBehaviour {
 
     public virtual void Hide()

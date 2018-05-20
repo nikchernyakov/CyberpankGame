@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 public class DonebleEvent : UnityEvent<Doneble>
@@ -8,6 +6,10 @@ public class DonebleEvent : UnityEvent<Doneble>
 
 }
 
+/*
+ * Event that can register listener call method for this event
+ * and invoke this method when Done state was updated
+ */
 public abstract class Doneble : MonoBehaviour{
 
     public abstract bool IsDone();
