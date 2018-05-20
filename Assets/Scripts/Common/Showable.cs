@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Showeble : MonoBehaviour {
+public class Showable : MonoBehaviour {
 
-    public void Hide()
+    public virtual void Hide()
     {
         gameObject.SetActive(false);
     }
 
-    public void Show()
+    public virtual void Show()
     {
         gameObject.SetActive(true);
     }

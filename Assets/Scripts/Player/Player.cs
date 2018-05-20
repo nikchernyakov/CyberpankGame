@@ -19,7 +19,7 @@ public class Player : LivingObject {
     bool facingRight = false; // For checking what side is turned
 
     private Robot currentRobot;
-    private Animator animator;
+    //private Animator animator;
     //private SpriteRenderer spriteRenderer;
 
     private float move;
@@ -41,7 +41,7 @@ public class Player : LivingObject {
         base.Start();
 
         //spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         jumpHandler = GetComponent<JumpHandler>();
         robotAnimator = animationRenderer.GetComponent<Animator>();

@@ -301,11 +301,11 @@
     <Compile Include="Assets\Scripts\Common\Dieble.cs" />
     <Compile Include="Assets\Scripts\Common\Doneble.cs" />
     <Compile Include="Assets\Scripts\Common\DonebleChecker.cs" />
-    <Compile Include="Assets\Scripts\Common\Hackble.cs" />
+    <Compile Include="Assets\Scripts\Common\Hackable.cs" />
     <Compile Include="Assets\Scripts\Common\LivingObject.cs" />
     <Compile Include="Assets\Scripts\Common\ObjectShower.cs" />
-    <Compile Include="Assets\Scripts\Common\Openble.cs" />
-    <Compile Include="Assets\Scripts\Common\Showeble.cs" />
+    <Compile Include="Assets\Scripts\Common\Openable.cs" />
+    <Compile Include="Assets\Scripts\Common\Showable.cs" />
     <Compile Include="Assets\Scripts\Common\Takeble.cs" />
     <Compile Include="Assets\Scripts\GameLifecycle\AnimationRenderer.cs" />
     <Compile Include="Assets\Scripts\GameLifecycle\Room.cs" />

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Room : Showeble {
+public class Room : Showable {
 
     public class RoomEvent : UnityEvent<Room>
     {

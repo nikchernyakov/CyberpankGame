@@ -60,7 +60,7 @@ public class Robot : MonoBehaviour {
     {
         Vector3 gunPos = gunPoint.localPosition;
         gunPos.x *= invert;
-        Bullet clone = Instantiate(bullet, gunPos + transform.position, Quaternion.identity) as Bullet;
+        Instantiate(bullet, gunPos + transform.position, Quaternion.identity);
     }
 
 

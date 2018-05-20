@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hackble : Doneble {
+public class Hackable : Doneble {
 
     public Sprite notHackSprite;
     public Sprite hackSprite;

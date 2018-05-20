@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackRobot : Robot
 {
-    private Hackble currentTarget = null;
+    private Hackable currentTarget = null;
 
     public override void ExtraSkill()
     {
@@ -20,7 +20,7 @@ public class AttackRobot : Robot
 
         if (collision.gameObject.CompareTag(TagManager.GetTagNameByEnum(TagEnum.Hackble)))
         {
-            currentTarget = collision.gameObject.GetComponent<Hackble>();
+            currentTarget = collision.gameObject.GetComponent<Hackable>();
         }
     }
 

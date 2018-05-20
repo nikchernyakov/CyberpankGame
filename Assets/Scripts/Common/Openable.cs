@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Openble : DonebleChecker{
+public class Openable : DonebleChecker{
     public bool isOpen = false;
 
     public void ChangeOpen()

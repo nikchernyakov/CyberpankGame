@@ -49,9 +49,4 @@ public class JumpHandler : MonoBehaviour {
         currentPositiveVelocityYBound = positiveVelocityYBound;
     }
 
-    public void JumpForHeight(float jumpHeight, float timeToJumpApex)
-    {
-        float needGravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
-        
-    }
 }

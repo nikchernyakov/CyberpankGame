@@ -7,7 +7,6 @@ public class PressurePlate : Doneble {
     [System.Serializable]
     public struct Plate
     {
-
         public Vector2 colliderSize;
         public Sprite sprite;
 
@@ -33,7 +32,7 @@ public class PressurePlate : Doneble {
     public LayerMask whatIsPress;
 
     private SpriteRenderer spriteRenderer;
-    private BoxCollider2D collider;
+    private BoxCollider2D plateCollider;
 
     public override bool IsDone()
     {
@@ -43,7 +42,7 @@ public class PressurePlate : Doneble {
 	// Use this for initialization
 	void Start () {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        collider = GetComponent<BoxCollider2D>();
+        plateCollider = GetComponent<BoxCollider2D>();
 
         ChangePlate(isPressed);
 	}
@@ -64,7 +63,7 @@ public class PressurePlate : Doneble {
     public void ChangePlate(bool isPressed)
     {
         currentPlate = isPressed ? pressedPlate : emptyPlate;
-        currentPlate.SetSizeToCollider(collider);
+        currentPlate.SetSizeToCollider(plateCollider);
         spriteRenderer.sprite = currentPlate.GetSprite();
         
     }

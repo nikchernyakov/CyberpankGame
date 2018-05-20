@@ -1,10 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿public class ObjectShower : DonebleChecker {
 
-public class ObjectShower : DonebleChecker {
-
-    public Showeble target;
+    public Showable target;
 
     public override void UpdateDone(Doneble donebleObject)
     {
