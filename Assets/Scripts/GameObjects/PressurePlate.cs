@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PressurePlate : Doneble {
 
@@ -46,18 +44,11 @@ public class PressurePlate : Doneble {
 
         ChangePlate(isPressed);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-    public void ChangePress()
+    protected override void ChangeDone()
     {
         isPressed = !isPressed;
         ChangePlate(isPressed);
-
-        UpdateDone();
     }
 
     public void ChangePlate(bool isPressed)
@@ -65,7 +56,6 @@ public class PressurePlate : Doneble {
         currentPlate = isPressed ? pressedPlate : emptyPlate;
         currentPlate.SetSizeToCollider(plateCollider);
         spriteRenderer.sprite = currentPlate.GetSprite();
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -76,7 +66,7 @@ public class PressurePlate : Doneble {
 
             if (pressingObjectsCount == 1)
             {
-                ChangePress();
+                UpdateDone();
             }
         }
     }
@@ -90,7 +80,7 @@ public class PressurePlate : Doneble {
             if (pressingObjectsCount <= 0)
             {
                 pressingObjectsCount = 0;
-                ChangePress();
+                UpdateDone();
             }
         }
     }

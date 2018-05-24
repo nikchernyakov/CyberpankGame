@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Button : Doneble {
     public Sprite buttonOff;
@@ -10,7 +7,6 @@ public class Button : Doneble {
     public bool isOn = false;
     public bool isClickable = true;
     public bool hasOnePush = true;
-
     
     private SpriteRenderer spriteRenderer;
 
@@ -19,13 +15,13 @@ public class Button : Doneble {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = isOn ? buttonOn : buttonOff;
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void ChangeButton()
+    {
+        UpdateDone();
+    }
+
+    protected override void ChangeDone()
     {
         if (!isClickable) return;
 
@@ -34,8 +30,6 @@ public class Button : Doneble {
 
         isOn = !isOn;
         spriteRenderer.sprite = isOn ? buttonOn : buttonOff;
-
-        UpdateDone();
     }
 
     public override bool IsDone()

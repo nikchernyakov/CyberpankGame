@@ -18,20 +18,17 @@ public class Hackable : Doneble {
         spriteRenderer.sprite = isHacked ? hackSprite : notHackSprite;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Hack()
     {
-
+        UpdateDone();
     }
 
-    public void Hack()
+    protected override void ChangeDone()
     {
         if (isHacked) return;
 
         isHacked = !isHacked;
         spriteRenderer.sprite = isHacked ? hackSprite : notHackSprite;
-
-        UpdateDone();
     }
 
     public override bool IsDone()

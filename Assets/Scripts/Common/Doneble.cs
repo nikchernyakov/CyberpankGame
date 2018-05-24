@@ -18,6 +18,14 @@ public abstract class Doneble : MonoBehaviour{
 
     public void UpdateDone()
     {
+        ChangeDone();
+        InvokeListeners();
+    }
+
+    protected abstract void ChangeDone();
+
+    private void InvokeListeners()
+    {
         if(m_donebleEvent != null)
         {
             m_donebleEvent.Invoke(this);
