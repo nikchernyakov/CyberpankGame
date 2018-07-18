@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 114909333905368418}
   - component: {fileID: 114684035445943322}
   - component: {fileID: 114823274777342386}
+  - component: {fileID: 114305287215983042}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -647,6 +648,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e15208a6b156314992b8ebe1ac1974c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114305287215983042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1109988154756198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e466170b3d7b1e04dbaaf4eb8d39e27d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ZRotate: {fileID: 4009699129853908}
+  MinAngle: 0
+  MaxAngle: 0
 --- !u!114 &114444356676725306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -725,9 +740,6 @@ MonoBehaviour:
   attackRobot: {fileID: 114987043374079444}
   agilityRobot: {fileID: 114484536409262752}
   tankRobot: {fileID: 114444356676725306}
-  zRotate: {fileID: 4009699129853908}
-  minAngle: 0
-  maxAngle: 0
 --- !u!114 &114823274777342386
 MonoBehaviour:
   m_ObjectHideFlags: 1

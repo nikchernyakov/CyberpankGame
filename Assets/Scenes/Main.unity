@@ -13034,39 +13034,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4005312095073596, guid: 5f73ef0817a19354ca2633e77b9b01f6,
     type: 2}
   m_PrefabInternal: {fileID: 697673892}
---- !u!1 &699882624 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1109988154756198, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5,
-    type: 2}
-  m_PrefabInternal: {fileID: 1341054497}
---- !u!114 &699882627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 699882624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db830abb134ce04498db8ee28e4b3485, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GroundRadius: 0.5
-  WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 2304
---- !u!114 &699882629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 699882624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf365d18317ba7246ae6c87700bed37d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minSpeedValue: -45
-  maxSpeedValue: 40
 --- !u!1001 &702598319
 Prefab:
   m_ObjectHideFlags: 0
@@ -14975,11 +14942,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4005312095073596, guid: 3e36280015d2054468bdf19a16da0536,
     type: 2}
   m_PrefabInternal: {fileID: 790894776}
---- !u!4 &792939225 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4226673973815758, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5,
-    type: 2}
-  m_PrefabInternal: {fileID: 1341054497}
 --- !u!1001 &794095945
 Prefab:
   m_ObjectHideFlags: 0
@@ -24845,97 +24807,6 @@ Prefab:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 1889059654}
-    - target: {fileID: 4186196839711434, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4186196839711434, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 20513593539703982, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5,
-        type: 2}
-      propertyPath: m_RenderingPath
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20513593539703982, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5,
-        type: 2}
-      propertyPath: m_BackGroundColor.r
-      value: 0.8897059
-      objectReference: {fileID: 0}
-    - target: {fileID: 20513593539703982, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5,
-        type: 2}
-      propertyPath: m_BackGroundColor.g
-      value: 0.8995943
-      objectReference: {fileID: 0}
-    - target: {fileID: 20513593539703982, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5,
-        type: 2}
-      propertyPath: m_BackGroundColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20513593539703982, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5,
-        type: 2}
-      propertyPath: near clip plane
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4005790720210590, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -150
-      objectReference: {fileID: 0}
-    - target: {fileID: 1154154373793914, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5, type: 2}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351905242325376, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 70274660806693532, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 70715770557518146, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4005790720210590, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 3.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 20513593539703982, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5,
-        type: 2}
-      propertyPath: orthographic size
-      value: 16.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114444356676725306, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5,
-        type: 2}
-      propertyPath: GroundCheck
-      value: 
-      objectReference: {fileID: 792939225}
-    - target: {fileID: 114484536409262752, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5,
-        type: 2}
-      propertyPath: GroundCheck
-      value: 
-      objectReference: {fileID: 1983487430}
-    - target: {fileID: 114987043374079444, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5,
-        type: 2}
-      propertyPath: GroundCheck
-      value: 
-      objectReference: {fileID: 1540746794}
-    - target: {fileID: 1382993958718434, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5, type: 2}
-      propertyPath: m_Name
-      value: GroundCheck
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075137102089618, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5, type: 2}
-      propertyPath: m_Name
-      value: GroundCheck
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197625765597540, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5, type: 2}
-      propertyPath: m_Name
-      value: GroundCheck
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5, type: 2}
   m_IsPrefabParent: 0
@@ -28313,11 +28184,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4005312095073596, guid: 4df3a7ccdebb2eb4aa314df6ef7b425d,
     type: 2}
   m_PrefabInternal: {fileID: 1536613580}
---- !u!4 &1540746794 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4643483431111564, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5,
-    type: 2}
-  m_PrefabInternal: {fileID: 1341054497}
 --- !u!1001 &1540822698
 Prefab:
   m_ObjectHideFlags: 0
@@ -35677,11 +35543,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4005312095073596, guid: 3e36280015d2054468bdf19a16da0536,
     type: 2}
   m_PrefabInternal: {fileID: 1981963802}
---- !u!4 &1983487430 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4177534042725108, guid: 53adef0cbbbb88e45aa4ef7ce8f1afe5,
-    type: 2}
-  m_PrefabInternal: {fileID: 1341054497}
 --- !u!4 &1984459338 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4415055234360022, guid: 252dce2baece6a64c83a5aae951bc59b,

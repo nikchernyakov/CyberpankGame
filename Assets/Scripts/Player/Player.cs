@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : LivingObject {
@@ -11,37 +10,27 @@ public class Player : LivingObject {
     public Robot tankRobot;
     private readonly Dictionary<int, Robot> _robots = new Dictionary<int, Robot>();
 
-    bool facingRight = false; // For checking what side is turned
-
     private GroundChecker _groundChecker;
+    private FlipChecker _flipChecker;
     
-    private Robot currentRobot;
+    private Robot _currentRobot;
     //private Animator animator;
     //private SpriteRenderer spriteRenderer;
 
-    private float move;
-    private Rigidbody2D rb;
+    private float _move;
+    private Rigidbody2D _rigidbody;
 
-    public Transform zRotate; // Rotate's object for axis Z
-
-    // Rotation bounds
-    public float minAngle = 0;
-    public float maxAngle = 0;
-
-    private float curTimeout, angle;
-    private int invert;
-    private Vector3 mouse;
-
-    private JumpHandler jumpHandler;
+    private JumpHandler _jumpHandler;
 
     protected override void Start () {
         base.Start();
 
         //spriteRenderer = GetComponent<SpriteRenderer>();
         //animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
-        jumpHandler = GetComponent<JumpHandler>();
+        _rigidbody = GetComponent<Rigidbody2D>();
+        _jumpHandler = GetComponent<JumpHandler>();
         _groundChecker = GetComponent<GroundChecker>();
+        _flipChecker = GetComponent<FlipChecker>();
         robotAnimator = animationRenderer.GetComponent<Animator>();
 
         foreach (Robot robot in (new Robot[] {attackRobot, agilityRobot, tankRobot}))
@@ -51,17 +40,15 @@ public class Player : LivingObject {
             robot.SetColliderProperties();
         }
 
-        currentRobot = attackRobot;
-        currentRobot.gameObject.SetActive(true);
-        SetAnimatorToRobot(currentRobot);
-        _groundChecker.SetGroundCheck(currentRobot.GroundCheck);
-
-        if (!facingRight) invert = -1; else invert = 1;
+        _currentRobot = attackRobot;
+        _currentRobot.gameObject.SetActive(true);
+        SetAnimatorToRobot(_currentRobot);
+        _groundChecker.SetGroundCheck(_currentRobot.GroundCheck);
     }
 
     void FixedUpdate()
     {
-        move = Input.GetAxis("Horizontal");
+        _move = Input.GetAxis("Horizontal");
     }
 
     protected override void Update () {
@@ -71,16 +58,14 @@ public class Player : LivingObject {
 
         CheckMove();
 
-        if(currentRobot.hasGun) CheckAttack();
+        if(_currentRobot.hasGun) CheckAttack();
 
         CheckExtra();
 
-        if (zRotate) SetRotation();
-
-        if (animationRenderer.GetBool(currentRobot.GetHasGunValueName()) != currentRobot.hasGun)
+        if (animationRenderer.GetBool(_currentRobot.GetHasGunValueName()) != _currentRobot.hasGun)
         {
-            animationRenderer.SetBool(currentRobot.GetHasGunValueName(), currentRobot.hasGun);
-            animationRenderer.SetTrigger(currentRobot.GetGunTriggerName());
+            animationRenderer.SetBool(_currentRobot.GetHasGunValueName(), _currentRobot.hasGun);
+            animationRenderer.SetTrigger(_currentRobot.GetGunTriggerName());
         }
     }
 
@@ -90,13 +75,13 @@ public class Player : LivingObject {
         robotAnimator.transform.position = robot.transform.position;
     }
 
-    void ChangeRobot(int newRobotID)
+    void ChangeRobot(int newRobotId)
     {
-        Robot previousRobot = currentRobot;
-        _robots.TryGetValue(newRobotID, out currentRobot);
-        if (currentRobot == null)
+        Robot previousRobot = _currentRobot;
+        _robots.TryGetValue(newRobotId, out _currentRobot);
+        if (_currentRobot == null)
         {
-            currentRobot = previousRobot;
+            _currentRobot = previousRobot;
             Debug.LogError("currentRobot == null in Player");
             return;
         }
@@ -105,14 +90,14 @@ public class Player : LivingObject {
         previousRobot.CancelExtraSkill();
         previousRobot.gameObject.SetActive(false);
 
-        SetAnimatorToRobot(currentRobot);
+        SetAnimatorToRobot(_currentRobot);
 
         // Change robot to new one
-        animationRenderer.SetInteger("RobotID", currentRobot.robotID);
-        TriggerChangeRobot(previousRobot.robotID, newRobotID);
-        currentRobot.gameObject.SetActive(true);
+        animationRenderer.SetInteger("RobotID", _currentRobot.robotID);
+        TriggerChangeRobot(previousRobot.robotID, newRobotId);
+        _currentRobot.gameObject.SetActive(true);
         
-        _groundChecker.SetGroundCheck(currentRobot.GroundCheck);
+        _groundChecker.SetGroundCheck(_currentRobot.GroundCheck);
 
     }
 
@@ -139,16 +124,16 @@ public class Player : LivingObject {
 
     void CheckChangeRobot()
     {
-        if (currentRobot.GetRobotID() != 0 && Input.GetKeyDown(KeyCode.Alpha1) && IsChangeRobotEnable(attackRobot.GetColliderSize()))
+        if (_currentRobot.GetRobotID() != 0 && Input.GetKeyDown(KeyCode.Alpha1) && IsChangeRobotEnable(attackRobot.GetColliderSize()))
         {
             ChangeRobot(attackRobot.GetRobotID());
 
         }
-        else if (currentRobot.GetRobotID() != 1 && Input.GetKeyDown(KeyCode.Alpha2))
+        else if (_currentRobot.GetRobotID() != 1 && Input.GetKeyDown(KeyCode.Alpha2))
         {
             ChangeRobot(agilityRobot.GetRobotID());
         }
-        else if (currentRobot.GetRobotID() != 2 && Input.GetKeyDown(KeyCode.Alpha3) && IsChangeRobotEnable(tankRobot.GetColliderSize()))
+        else if (_currentRobot.GetRobotID() != 2 && Input.GetKeyDown(KeyCode.Alpha3) && IsChangeRobotEnable(tankRobot.GetColliderSize()))
         {
             ChangeRobot(tankRobot.GetRobotID());
         }
@@ -171,7 +156,7 @@ public class Player : LivingObject {
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         { 
-           currentRobot.AttackSkill(transform, facingRight ? -1 : 1);
+           _currentRobot.AttackSkill(transform, _flipChecker.IsFacingRight() ? -1 : 1);
         }
     }
 
@@ -179,20 +164,20 @@ public class Player : LivingObject {
     {
         if (Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.J))
         {
-            currentRobot.ExtraSkill();
+            _currentRobot.ExtraSkill();
         }
     }
 
     void CheckMove()
     {
         // Check jump
-        if (_groundChecker.IsGrounded() && jumpHandler.CheckJump())
+        if (_groundChecker.IsGrounded() && _jumpHandler.CheckJump())
         {
-            jumpHandler.Jump(currentRobot.jumpVelocity, currentRobot.positiveVelocityYBound);
+            _jumpHandler.Jump(_currentRobot.jumpVelocity, _currentRobot.positiveVelocityYBound);
         }
 
         // Triggers for animation
-        if (move != 0)
+        if (_move != 0)
         {
             animationRenderer.SetTrigger("RobotRun");
         } else
@@ -200,39 +185,10 @@ public class Player : LivingObject {
             animationRenderer.SetTrigger("RobotIdle");
         }
 
-        Vector2 velocityVector = new Vector2(move * currentRobot.maxSpeed, rb.velocity.y);
-        rb.velocity = velocityVector;
+        Vector2 velocityVector = new Vector2(_move * _currentRobot.maxSpeed, _rigidbody.velocity.y);
+        _rigidbody.velocity = velocityVector;
 
-        CheckFlip();
-    }
-
-    void CheckFlip()
-    {
-        if (move > 0 && !facingRight)
-            Flip();
-        else if (move < 0 && facingRight)
-            Flip();
-        /*if (angle == maxAngle && mouse.x < zRotate.position.x && facingRight) Flip();
-        else if (angle == maxAngle && mouse.x > zRotate.position.x && !facingRight) Flip();*/
-    }
-
-    void Flip()
-    {
-        facingRight = !facingRight;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
-    }
-
-    void SetRotation()
-    {
-        Vector3 mousePosMain = Input.mousePosition;
-        mousePosMain.z = Camera.main.transform.position.z;
-        mouse = Camera.main.ScreenToWorldPoint(mousePosMain);
-        Vector3 lookPos = mouse - transform.position;
-        angle = Mathf.Atan2(lookPos.y, lookPos.x * invert) * Mathf.Rad2Deg;
-        angle = Mathf.Clamp(angle, minAngle, maxAngle);
-        zRotate.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        _flipChecker.CheckFlip(_move);
     }
 
 }
