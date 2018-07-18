@@ -11,13 +11,10 @@ public class Player : LivingObject {
     public Robot tankRobot;
     private readonly Dictionary<int, Robot> _robots = new Dictionary<int, Robot>();
 
-    // For checking ground
-    bool grounded = false;
-    public float groundRadius = 0.2f;
-    public LayerMask whatIsGround;
-
     bool facingRight = false; // For checking what side is turned
 
+    private GroundChecker _groundChecker;
+    
     private Robot currentRobot;
     //private Animator animator;
     //private SpriteRenderer spriteRenderer;
@@ -44,6 +41,7 @@ public class Player : LivingObject {
         //animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         jumpHandler = GetComponent<JumpHandler>();
+        _groundChecker = GetComponent<GroundChecker>();
         robotAnimator = animationRenderer.GetComponent<Animator>();
 
         foreach (Robot robot in (new Robot[] {attackRobot, agilityRobot, tankRobot}))
@@ -56,14 +54,13 @@ public class Player : LivingObject {
         currentRobot = attackRobot;
         currentRobot.gameObject.SetActive(true);
         SetAnimatorToRobot(currentRobot);
+        _groundChecker.SetGroundCheck(currentRobot.GroundCheck);
 
         if (!facingRight) invert = -1; else invert = 1;
     }
 
     void FixedUpdate()
     {
-        grounded = Physics2D.OverlapCircle(currentRobot.groundCheck.position, groundRadius, whatIsGround);
-
         move = Input.GetAxis("Horizontal");
     }
 
@@ -114,6 +111,8 @@ public class Player : LivingObject {
         animationRenderer.SetInteger("RobotID", currentRobot.robotID);
         TriggerChangeRobot(previousRobot.robotID, newRobotID);
         currentRobot.gameObject.SetActive(true);
+        
+        _groundChecker.SetGroundCheck(currentRobot.GroundCheck);
 
     }
 
@@ -157,11 +156,11 @@ public class Player : LivingObject {
 
     bool IsChangeRobotEnable(Vector2 size)
     {
-        RaycastHit2D upHit = Physics2D.Raycast(transform.position, Vector2.up, size.y, whatIsGround);
+        RaycastHit2D upHit = Physics2D.Raycast(transform.position, Vector2.up, size.y, _groundChecker.WhatIsGround);
         /*RaycastHit2D upLeftHit = Physics2D.Raycast(transform.position + size.x * Vector3.left, Vector2.up, size.y, whatIsGround);
         RaycastHit2D upRightHit = Physics2D.Raycast(transform.position + size.x * Vector3.right, Vector2.up, size.y, whatIsGround);*/
 
-        RaycastHit2D downHit = Physics2D.Raycast(transform.position, Vector2.down, size.y, whatIsGround);
+        RaycastHit2D downHit = Physics2D.Raycast(transform.position, Vector2.down, size.y, _groundChecker.WhatIsGround);
         /*RaycastHit2D downLeftHit = Physics2D.Raycast(transform.position + size.x * Vector3.left, Vector2.up, size.y, whatIsGround);
         RaycastHit2D downRightHit = Physics2D.Raycast(transform.position + size.x * Vector3.right, Vector2.up, size.y, whatIsGround);*/
         return (upHit.collider == null /*&& upLeftHit.collider == null && upRightHit.collider == null*/)
@@ -187,7 +186,7 @@ public class Player : LivingObject {
     void CheckMove()
     {
         // Check jump
-        if (grounded && jumpHandler.CheckJump())
+        if (_groundChecker.IsGrounded() && jumpHandler.CheckJump())
         {
             jumpHandler.Jump(currentRobot.jumpVelocity, currentRobot.positiveVelocityYBound);
         }

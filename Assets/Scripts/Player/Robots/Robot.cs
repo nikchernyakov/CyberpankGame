@@ -14,7 +14,7 @@ public class Robot : MonoBehaviour {
     public Bullet bullet;
 
     public Transform gunPoint; // Bullet born point
-    public Transform groundCheck;
+    public Transform GroundCheck;
 
     private Vector2 colliderSize;
     private Vector2 colliderOffset;
