@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour {
     // Update HP value in UI
     void UpdateUIHp()
     {
+        if (uiManager == null) return;
+        
         currentUIHp = player.GetCurrentHP();
         uiManager.ChangeHP(currentUIHp);
     }
