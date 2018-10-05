@@ -14,24 +14,23 @@ public class Player : LivingObject {
     private FlipChecker _flipChecker;
     
     private Robot _currentRobot;
-    //private Animator animator;
-    //private SpriteRenderer spriteRenderer;
 
     private float _move;
     private Rigidbody2D _rigidbody;
 
     private JumpHandler _jumpHandler;
 
-    protected override void Start () {
-        base.Start();
-
-        //spriteRenderer = GetComponent<SpriteRenderer>();
-        //animator = GetComponent<Animator>();
+    private void Awake()
+    {
         _rigidbody = GetComponent<Rigidbody2D>();
         _jumpHandler = GetComponent<JumpHandler>();
         _groundChecker = GetComponent<GroundChecker>();
         _flipChecker = GetComponent<FlipChecker>();
         robotAnimator = animationRenderer.GetComponent<Animator>();
+    }
+
+    protected override void Start () {
+        base.Start();
 
         foreach (Robot robot in (new Robot[] {attackRobot, agilityRobot, tankRobot}))
         {
@@ -42,7 +41,7 @@ public class Player : LivingObject {
 
         _currentRobot = attackRobot;
         _currentRobot.gameObject.SetActive(true);
-        SetAnimatorToRobot(_currentRobot);
+        
         _groundChecker.SetGroundCheck(_currentRobot.GroundCheck);
     }
 
@@ -62,22 +61,17 @@ public class Player : LivingObject {
 
         CheckExtra();
 
-        if (animationRenderer.GetBool(_currentRobot.GetHasGunValueName()) != _currentRobot.hasGun)
+        /*if (animationRenderer.GetBool(_currentRobot.GetHasGunValueName()) != _currentRobot.hasGun)
         {
             animationRenderer.SetBool(_currentRobot.GetHasGunValueName(), _currentRobot.hasGun);
             animationRenderer.SetTrigger(_currentRobot.GetGunTriggerName());
-        }
+        }*/
     }
 
-    void SetAnimatorToRobot(Robot robot)
-    {
-        robotAnimator.transform.parent = robot.transform;
-        robotAnimator.transform.position = robot.transform.position;
-    }
 
     void ChangeRobot(int newRobotId)
     {
-        Robot previousRobot = _currentRobot;
+        var previousRobot = _currentRobot;
         _robots.TryGetValue(newRobotId, out _currentRobot);
         if (_currentRobot == null)
         {
@@ -89,16 +83,14 @@ public class Player : LivingObject {
         // Cancel all activivties for previous robot and set unactive status
         previousRobot.CancelExtraSkill();
         previousRobot.gameObject.SetActive(false);
-
-        SetAnimatorToRobot(_currentRobot);
+        
+        _currentRobot.gameObject.SetActive(true);
 
         // Change robot to new one
         animationRenderer.SetInteger("RobotID", _currentRobot.robotID);
         TriggerChangeRobot(previousRobot.robotID, newRobotId);
-        _currentRobot.gameObject.SetActive(true);
         
         _groundChecker.SetGroundCheck(_currentRobot.GroundCheck);
-
     }
 
     void TriggerChangeRobot(int robotIDfrom, int robotIDto)
